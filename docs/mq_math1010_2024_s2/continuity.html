@@ -1,0 +1,251 @@
+---
+layout: notes
+title: Continuity
+---
+
+<div class="accordion"><div class="accordion-item" id="outline-container-org548d011-item"><h1 class="accordion-header" id="outline-container-org548d011-header"><button aria-controls="outline-container-org548d011-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-org548d011-collapse" data-bs-toggle="collapse" id="org548d011" type="button"><span class="section-number-2">1.</span> Introduction</button></h1><div aria-labelledby="outline-container-org548d011-header" class="accordion-collapse collapse" id="outline-container-org548d011-collapse"><div class="accordion-body p-3 m-0" id="text-1-body">
+<p>
+Loosely speaking, continuous functions are functions that can be drawn with a pencil without taking the pencil off the page. Continuous functions are such that a small change in the input results in a small change of the output. Many real life phenomena are modelled by continuous functions.
+</p>
+<p>
+We will explore the concept of continuity and see how to determine when various functions are continuous.
+</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Continuous_function">Wikipedia article on Continuous Functions</a>
+</p>
+</div>
+
+
+<div class="outline-3" id="outline-container-org9aa39c0">
+<h3 id="org9aa39c0">References <a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)">Calculus (OpenStax)</a></h3>
+<div class="outline-text-3" id="text-org9aa39c0">
+<ul class="org-ul">
+<li><a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/02%3A_Limits/2.04%3A_Continuity">2.4 Continuity</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="accordion-item" id="outline-container-org1919bec-item"><h1 class="accordion-header" id="outline-container-org1919bec-header"><button aria-controls="outline-container-org1919bec-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-org1919bec-collapse" data-bs-toggle="collapse" id="org1919bec" type="button"><span class="section-number-2">2.</span> Continuity</button></h1><div aria-labelledby="outline-container-org1919bec-header" class="accordion-collapse collapse" id="outline-container-org1919bec-collapse"><div class="accordion-body p-3 m-0" id="text-2-body">
+<div class="defn card" id="orgb17ae81"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+A function \(f : (a, b) \to \mathbb{R}\) is continuous at the point \(x_0 \in (a, b)\) if
+\[
+\lim_{x\to x_0} f(x) = f(x_0).
+\]
+</p>
+<p>
+A function \(f : [a, b] \to \mathbb{R}\) is continuous at the left end-point point \(a\) if
+\[
+\lim_{x\to a^+} f(x) = f(a).
+\]
+It is continuous at the right end-point \(b\) if
+\[
+\lim_{x\to b^-} f(x) = f(b).
+\]
+</p>
+<p>
+A function defined on an interval is continuous if it is continuous at every point of the interval.
+</p>
+</div></div>
+<div class="eg card" id="org200e2f5"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+The function
+\[
+f(x) = x^2 + 2 \quad \text{for} \quad x \in [3, 7]
+\]
+is continuous since if \(x_0 \in (3, 7)\) then
+\[
+\lim_{x\to x_0} f(x) = \lim_{x\to x_0} x^2 + 2 = x_0^2 + 2 = f(x_0),
+\]
+\[
+\lim_{x\to 3^-} f(x) = \lim_{x\to 3^-} x^2 + 2 = 3^2 + 2 = f(3),
+\]
+and
+\[
+\lim_{x\to 7^+} f(x) = \lim_{x\to 7^+} x^2 + 2 = 7^2 + 2 = f(7).
+\]
+</p>
+</div></div>
+<div class="eg card" id="org326c066"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Show the function,
+\[
+f(x) = \frac{x-2}{x + 1}
+\]
+is continuous for every \(x_0 \neq -1\).
+</p>
+<p>
+For \(x_0 \neq -1\), the denominator has limit
+\[
+\lim_{x\to x_0} x + 1 = x_0 + 1 \neq 0.
+\]
+Thus we may apply the quotient law for limits to conclude that
+\[
+\lim_{x\to x_0} \frac{x-2}{x + 1} = \frac{\lim_{x\to x_0} x-2}{\lim_{x\to x_0} x+1} = \frac{x_0 - 2}{x_0 + 1}.
+\]
+</p>
+<p>
+But this limit is equal to
+\[
+f(x_0) = \frac{x_0 - 2}{x_0 + 1}
+\]
+hence \(f\) is continuous at \(x_0\).
+</p>
+</div></div>
+</div></div>
+
+
+</div><div class="accordion-item" id="outline-container-org7ddc9b2-item"><h1 class="accordion-header" id="outline-container-org7ddc9b2-header"><button aria-controls="outline-container-org7ddc9b2-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-org7ddc9b2-collapse" data-bs-toggle="collapse" id="org7ddc9b2" type="button"><span class="section-number-2">3.</span> Continuity Laws</button></h1><div aria-labelledby="outline-container-org7ddc9b2-header" class="accordion-collapse collapse" id="outline-container-org7ddc9b2-collapse"><div class="accordion-body p-3 m-0" id="text-3-body">
+<div class="thm card" id="org4ac8910"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Sums, products and quotients (at points where the denominator is non-zero) of continuous functions are continuous.
+</p>
+</div></div>
+<div class="eg card" id="orgdf5f498"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Show that the function
+\[
+f(x) = 2x + x^3 \frac{x-2}{x + 1}
+\]
+is continuous for every \(x\).
+</p>
+<p>
+The function \(2x\) is continuous since
+\[
+\lim_{x\to x_0} 2x = 2x_0 = f(x_0).
+\]
+</p>
+<p>
+The function \(x\) is continuous and so too is \(x^2\) since it is the product of the continuous function \(x\) with the continuous function \(x\). Then the function \(x^3\) is continuous since it is the product of the continuous functions \(x\) and \(x^2\).
+</p>
+<p>
+In the previous section we saw that \(\frac{x-2}{x + 1}\) is continuous. Then \(x^3 \frac{x-2}{x + 1}\) is continuous being the product of continuous functions.
+</p>
+<p>
+Finally, \(f\) is continuous because it's the sum of the continuous functions \(2x\) and \(x^3 \frac{x-2}{x + 1}\).
+</p>
+</div></div>
+<div class="thm card" id="org88c7e40"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+If \(f\) and \(g\) are continuous functions, then the composition \(f \circ g\) is continuous wherever it is defined.
+</p>
+</div></div>
+<div class="eg card" id="org345e2d8"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Let \(f(y) = \tfrac{1}{y}\) and \(g(x) = x^2 + 2\).
+</p>
+<p>
+By the limit laws, \(f(y)\) is continuous for any \(y_0 \neq 0\):
+\[
+\lim_{y\to y_0} f(y) = \lim_{y\to y_0} \frac{1}{y} = \frac{1}{\lim_{y\to y_0} y} = \frac{1}{y_0} = f(y_0).
+\]
+By the previous example, \(g(x)\) is continuous for any \(x \in [3, 7]\). In fact, the argument given there shows that \(g(x)\) is continuous for any \(x \in \mathbb{R}\). We also have \(g(x) = x^2 + 2 \geq 2 &gt; 0\) for every \(x\); thus \(g(x) \neq 0\) for every \(x\). Therefore
+\[
+f \circ g(x) = f(g(x)) = f(x^2 + 2) = \frac{1}{x^2 + 2}
+\]
+is continuous for every \(x \in \mathbb{R}\).
+</p>
+</div></div>
+</div></div>
+
+
+</div><div class="accordion-item" id="outline-container-org8656e23-item"><h1 class="accordion-header" id="outline-container-org8656e23-header"><button aria-controls="outline-container-org8656e23-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-org8656e23-collapse" data-bs-toggle="collapse" id="org8656e23" type="button"><span class="section-number-2">4.</span> Continuity of Standard Functions</button></h1><div aria-labelledby="outline-container-org8656e23-header" class="accordion-collapse collapse" id="outline-container-org8656e23-collapse"><div class="accordion-body p-3 m-0" id="text-4-body">
+<div class="thm card" id="orgc0079a4"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+The following functions are continuous
+</p>
+<ul class="org-ul">
+<li>Any polynomial, \(f(x) = c_n x^n + c_{n-1} x^{n-1} + \dots + c_1 x + c_0\)</li>
+<li>\(\sin, \cos, \tan, \sec\), etc. (note that \(\tan\) is not defined for every \(x\), but it is continuous for each value of \(x\) where it is defined.</li>
+<li>\(e^x, \ln x\)</li>
+<li>\(\sin^{-1}, \cos^{-1}, \tan^{-1}\), etc.</li>
+</ul>
+</div></div>
+<div class="eg card" id="org5878133"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+For any \(n\), \(x^n\) is continuous. To see this observe that \(x\) is continuous, hence so too is \(x^2\) since \(x^2\) is the product of \(x\) with \(x\). Next \(x^3\) is continuous since \(x\) and \(x^2\) are continuous hence so too is their product \(xx^2 = x^3\). Continuing we get \(x^4 = xx^3\) is continuous, \(x^5 = xx^4\) is continuous and so on - technically one uses mathematical induction to prove this, but the pattern should be clear!
+</p>
+</div></div>
+<div class="eg card" id="orgef146d8"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Any monomial is continuous. A monomial is a function of the form \(ax^n\) where \(a \in \mathbb{R}\), and \(n\) is a non-negative integer. Note that \(f(x) = a\) (i.e. a constant function) is continuous and we just saw that \(x^n\) is continuous, hence the product \(ax^n\) is continuous.
+</p>
+</div></div>
+<div class="eg card" id="org82dd527"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+A polynomial is an expression of the form
+\[
+f(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0
+\]
+where \(a_n, \cdots, a_0\) are real numbers \(n\) is a non-negative integer. The integer \(n\) is called the <i>degree</i>.
+</p>
+<p>
+Note the case \(n=0\) is a constant function \(a_0\), the case \(n=1\) is a linear polynomial \(a_1 x + a_0\), \(n=2\) is a quadratic \(a_2 x^2 + a_1 x + a_0\) and so on.
+</p>
+<p>
+We proceed iteratively as with monomials. Each individual term is a monomial hence continuous by the previous example. At degree \(0\), we just have a constant function \(a_0\) which is continuous. At degree \(1\) we have \(a_1 x + a_0\) which is continuous being the sum of the continuous monomials \(a_1 x\) and \(a_0\). Then quadratics are continuous since they are of the form \(a_2 x^2 + (a_1 x + a_0)\) which is the sum of the continuous functions \(a_2 x^2\) and \(a_1 x + a_0\). Cubics are likewise continuous since they are of the form \(a_3x^3 + (a_2 x^2 + a_1 x + a_0)\), quartics are similarly continuous, then qunitics and so on.
+</p>
+</div></div>
+<div class="eg card" id="orgff0233f"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+The function \(\sin(x)\) is continuous at every \(x_0 \in \mathbb{R}\). To see this recall the angle sum formula,
+\[
+\sin(a + b) = \sin(a) \cos(b)  + \cos(a) \sin(b)
+\]
+</p>
+<p>
+For any \(x_0\), let \(a = x-x_0\) and \(b = x_0\). Then \(x = x-x_0 + x_0 = a + b\). Using the angle sum formula,
+\[
+\sin(x) = \sin(x-x_0 + x_0) = \sin(x-x_0) \cos(x_0) + \cos(x-x_0) \sin(x_0)
+\]
+Recall that using the squeeze theorem, we obtained that
+\[
+\lim_{y\to 0} \sin(y) = 0 = \sin(0).
+\]
+That is, \(\sin(x)\) is continuous at \(0\). Similarly \(\cos(x)\) is continuous at \(0\). Using the composite rule for continuous functions with \(y = x-x_0\) we have that the composite function \(\sin(x-x_0)\) is continuous at \(x=x_0\) and likewise for \(\cos(x-x_0)\). Thus making use of the angle sum formula, we obtain
+</p>
+\begin{align*}
+\lim_{x\to x_0} \sin(x) &amp;= \lim_{x \to x_0} \big[\sin(x-x_0) \cos(x_0) + \cos(x-x_0) \sin(x_0)\big] \\
+&amp;= \big[\lim_{x\to x_0} \sin(x-x_0)\big] \cos(x_0) + \lim_{x\to x_0} \big[\cos(x-x_0)\big] \sin(x_0) \\
+&amp;= \sin(x_0-x_0) \cos(x_0) + \cos(x_0-x_0) \sin(x_0) \\
+&amp;= \sin(0) \cos(x_0) + \cos(0) \sin(x_0) \\
+&amp;= \sin(x_0).
+\end{align*}
+<p>
+Here we use that \(\sin(0) = 0\) and \(\cos(0) = 1\).
+</p>
+<p>
+Thus \(\sin\) is continuous at any \(x_0\).
+</p>
+</div></div>
+<div class="eg card" id="org04eeae5"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+The function \(\cos(x)\) is continuous. We can argue similarly to the case of \(\sin\), or we can use Pythagoras' theorem:
+\[
+\sin^2 x + \cos^2 x = 1.
+\]
+Solving for \(\cos x\) in terms of \(\sin x\) we get
+</p>
+<p>
+<b>Note</b>: Any real number equals \(x + 2\pi k\) where \(k\) is an integer and \(x \in [-\pi/2, 3\pi/2]\). Since \(\cos\) is \(2\pi\)-periodic, it suffices to consider only \(x \in [-\pi/2, 3\pi/2]\).
+</p>
+<p>
+Let
+\[
+f(z) = \sqrt{z}, \quad g(y) = 1 - y^2, \quad h(x) = \sin x
+\]
+Then each of \(f, g, h\) is continuous and hence so too is the composition,
+\[
+\sqrt{1 - \sin^2 x} = f(g(h(x)).
+\]
+Likewise, \(-\sqrt{1 - \sin^2 x} = -f(g(h(x))\) is continuous. Thus for \(x \neq -\pi/2, 3\pi/2\) we see that \(\cos(x)\) is continuous. At the crossover points, \(x = -\pi/2, \pi/2, 3\pi/2\) we have \(\sin(x) = 1\) and therefore
+\[
+\sqrt{1 - \sin^2 x} = 0 = -\sqrt{1 - \sin^2 x}.
+\]
+Thus these two definitions (\(+\) or \(-\)) are equal at these crossover points, hence \(\cos x\) is continuous at those points as well.
+</p>
+</div></div>
+</div></div>
+
+
+</div></div>

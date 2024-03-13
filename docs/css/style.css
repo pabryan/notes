@@ -1,0 +1,87 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+  border: 1px solid white; /* Add a thin border to each list item */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #121212; /* Add a grey background color */
+  padding: 12px; /* Add some padding */
+}
+
+h3 {
+    padding: 2ex;
+    text-align: center;
+}
+
+.card {
+    margin-top: 1rem!important;
+    margin-bottom: 1rem!important;
+    margin-right: 0!important;
+    margin-left: 0!important;
+}
+
+.card-header {
+    color: #ffff;
+}
+
+.defn .card-header {
+    background-color: #0059b3;
+}
+
+.defn h5.card-title::before {
+    content: "Definition"
+}
+
+.eg .card-header {
+    background-color: #00802b;
+}
+
+.eg h5.card-title::before {
+    content: "Example"
+}
+
+.ex .card-header {
+    background-color: #5c0099;
+}
+
+.ex h5.card-title::before {
+    content: "Exercise"
+}
+
+.lem .card-header {
+    background-color: #800000;
+}
+
+.lem h5.card-title::before {
+    content: "Lemma"
+}
+
+.thm .card-header {
+    background-color: #800000;
+}
+
+.thm h5.card-title::before {
+    content: "Theorem"
+}
+
+.cor .card-header {
+    background-color: #800000;
+}
+
+.cor h5.card-title::before {
+    content: "Corollary"
+}
+
+.pf .card-header {
+    background-color: #800000;
+}
+
+.pf h5.card-title::before {
+    content: "Proof"
+}

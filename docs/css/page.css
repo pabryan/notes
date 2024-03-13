@@ -1,0 +1,22 @@
+body {
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.accordion-button {
+    font-size: 20px !important;
+}
+
+@media (max-width: 700px) {
+    .MathJax {
+	font-size: 0.8em;
+    }
+    .shrinkeq {
+	font-size: 70%;
+    }
+
+    mjx-container {
+	overflow-x: auto;
+	overflow-y: hidden;
+    }
+}
