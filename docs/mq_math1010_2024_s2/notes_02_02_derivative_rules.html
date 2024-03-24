@@ -1,0 +1,433 @@
+---
+layout: notes
+title: Notes 02.02 Derivative Rules
+---
+
+<div class="accordion"><div class="accordion-item" id="outline-container-orgbe7796d-item"><h1 class="accordion-header" id="outline-container-orgbe7796d-header"><button aria-controls="outline-container-orgbe7796d-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-orgbe7796d-collapse" data-bs-toggle="collapse" id="orgbe7796d" type="button"><span class="section-number-2">1.</span> Introduction</button></h1><div aria-labelledby="outline-container-orgbe7796d-header" class="accordion-collapse collapse" id="outline-container-orgbe7796d-collapse"><div class="accordion-body p-3 m-0" id="text-1-body">
+<p>
+We establish some fundamental rules for differentiation. This allows us to differentiate complex functions by breaking them down into simpler pieces and differentiating those pieces. In this way we see how to differentiate, polynomials and rational functions (quotients of polynomials). We also investigate the derivatives of trigonometric functions.
+</p>
+</div>
+
+
+<div class="outline-3" id="outline-container-org8565cc1">
+<h3 id="org8565cc1">Lecture Materials</h3>
+<div class="outline-text-3" id="text-org8565cc1">
+<ul class="org-ul">
+<li>These notes: <a href="https://pabryan.github.io/notes/mq_math1010_2024_s2/notes_02_02_derivative_rules.pdf">PDF</a></li>
+<li>Slides: <a href="https://pabryan.github.io/slides/mq_math1010_2024_s2/lecture_02_02_derivative_rules/">Online</a></li>
+<li>Slides <a href="https://pabryan.github.io/slides/mq_math1010_2024_s2/lecture_02_02_derivative_rules.pdf">PDF</a></li>
+</ul>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org68b3224">
+<h3 id="org68b3224">References: <a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)">Calculus OpenStax</a></h3>
+<div class="outline-text-3" id="text-org68b3224">
+<ul class="org-ul">
+<li><a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/03%3A_Derivatives/3.03%3A_Differentiation_Rules">3.3: Differentiation Rules</a></li>
+<li><a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/03%3A_Derivatives/3.05%3A_Derivatives_of_Trigonometric_Functions">3.5: Derivatives of Trigonometric Functions</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="accordion-item" id="outline-container-orgd112965-item"><h1 class="accordion-header" id="outline-container-orgd112965-header"><button aria-controls="outline-container-orgd112965-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-orgd112965-collapse" data-bs-toggle="collapse" id="orgd112965" type="button"><span class="section-number-2">2.</span> Linearity</button></h1><div aria-labelledby="outline-container-orgd112965-header" class="accordion-collapse collapse" id="outline-container-orgd112965-collapse"><div class="accordion-body p-3 m-0" id="text-2-body">
+<div class="thm card" id="orgc5010bd"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+The derivative is <i>linear</i>. That is for any functions \(f, g\) and any constants \(A, B \in \mathbb{R}\),
+\[
+(Af + Bg)' = Af' + Bg'.
+\]
+In \(\tfrac{d}{dx}\) notation
+\[
+\frac{d}{dx} (Af + Bg) = A \frac{df}{dx} + B \frac{dg}{dx}.
+\]
+</p>
+</div></div>
+<div class="eg card" id="orgb8a63ac"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Compute the derivative of
+\[
+f(x) = 5x^2 + 3x.
+\]
+</p>
+<p>
+We've already seen that \(\tfrac{d}{dx} x^2 = 2x\) and \(\tfrac{d}{dx} x = 1\). Thus
+</p>
+\begin{align*}
+\frac{d}{dx}\left(5x^2 + 3x\right) &amp;= 5 \frac{d}{dx} x^2 + 3 \frac{d}{dx} x \\
+&amp;= 5 \cdot 2x + 3 \cdot 1 \\
+&amp;= 10x + 3.
+\end{align*}
+
+</div></div>
+<div class="pf" id="org9e3e550">
+<p>
+<b>Proof of Linearity</b>
+</p>
+<p>
+We can do this directly using the fact that limits are linear:
+</p>
+\begin{align*}
+(Af + Bg)' &amp;= \lim_{\Delta x \to 0} \frac{(Af + Bg)(x + \Delta x) - (Af + Bg)(x)}{\Delta x} \\
+&amp;= \lim_{\Delta x \to 0} \frac{Af(x+\Delta x) + Bg(x + \Delta x) - Af(x) + Bg(x)}{\Delta x} \\
+&amp;= \lim_{\Delta x \to 0} \frac{A[f(x + \Delta x) - f(x)] + B[g(x + \Delta x) - Bg(x)]}{\Delta x} \\
+&amp;= A \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{x} + B \lim_{\Delta x \to 0} \frac{g(x + \Delta x) - g(x)}{\Delta x} \\
+&amp;= A f' + Bg'.
+\end{align*}
+
+</div>
+</div></div>
+
+
+</div><div class="accordion-item" id="outline-container-orga8a442a-item"><h1 class="accordion-header" id="outline-container-orga8a442a-header"><button aria-controls="outline-container-orga8a442a-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-orga8a442a-collapse" data-bs-toggle="collapse" id="orga8a442a" type="button"><span class="section-number-2">3.</span> Product Rule</button></h1><div aria-labelledby="outline-container-orga8a442a-header" class="accordion-collapse collapse" id="outline-container-orga8a442a-collapse"><div class="accordion-body p-3 m-0" id="text-3-body">
+<div class="thm card" id="org6562b58"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+\[
+(fg)' = fg' + f'g.
+\]
+In \(\tfrac{d}{dx}\) notation,
+\[
+\frac{d}{dx} (fg) = f \frac{dg}{dx} + g \frac{df}{dx}.
+\]
+</p>
+</div></div>
+<div class="eg card" id="orgcb54da7"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Show that \(\tfrac{d}{dx} x^2 = 2x\).
+</p>
+<p>
+Let \(f(x) = x = g(x)\) so that \(fg = x^2\) and \(f' = g' = 1\). By the product rule,
+</p>
+\begin{align*}
+\frac{d}{dx} x^2 &amp;= (fg)' = fg' + f' g \\
+&amp;= x \times 1 + 1 \times x \\
+&amp;= x + x = 2x.
+\end{align*}
+
+</div></div>
+<div class="eg card" id="orgeecdc19"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Show that \(\tfrac{d}{dx} x^3 = 3x^2\).
+</p>
+<p>
+Let \(f(x) = x^2\) and \(g(x) = x\) so that \(fg = x^3\), \(f' = 2x\), and \(g' = 1\). By the product rule,
+</p>
+\begin{align*}
+\frac{d}{dx} x^3 &amp;= (fg)' = fg' + f' g \\
+&amp;= x^2 \times 1 + 2x \times x \\
+&amp;= x^2 + 2x^2 = 3x^2.
+\end{align*}
+
+</div></div>
+<div class="pf" id="org0ee7755">
+<p>
+<b>Proof of Product Rule</b>
+</p>
+<p>
+The change \(\Delta(fg)\) in \(fg\) is
+</p>
+\begin{align*}
+\Delta (fg) &amp;= (fg)(x + \Delta x) - (fg)(x) \\
+&amp;= f(x + \Delta x) g(x + \Delta x) - f(x) g(x)
+\end{align*}
+<p>
+Substituting in
+</p>
+\begin{align*}
+f(x + \Delta x) &amp; = f(x) + \Delta f, \\
+g(x + \Delta x) &amp;= g(x) + \Delta g
+\end{align*}
+<p>
+we calculate
+</p>
+\begin{align*}
+\Delta (fg) &amp;= \left[f(x) + \Delta f\right] \left[g(x) + \Delta g\right] - f(x) g(x) \\
+&amp;= f(x)g(x) + f(x) \Delta g + \Delta f g(x) + \Delta f \Delta g- f(x) g(x) \\
+&amp;= f(x) \Delta g + \Delta f g(x) + \Delta f \Delta g.
+\end{align*}
+
+<p>
+Taking the limit of the difference quotient,
+</p>
+\begin{align*}
+(fg)' &amp;= \lim_{\Delta x \to 0} \frac{\Delta (fg)}{\Delta x} \\
+&amp;= \lim_{\Delta x \to 0} \frac{f(x) \Delta g + \Delta f g(x) + \Delta f \Delta g}{\Delta x} \\
+&amp;= f(x) \lim_{\Delta x \to 0} \frac{\Delta g}{\Delta x} + \lim_{\Delta x \to 0} \frac {\Delta f}{\Delta x} g(x)+ \lim_{\Delta x \to 0} \frac{\Delta f}{\Delta x} \lim_{\Delta x \to 0} \Delta g\\
+&amp;= f g' + f' g + f' \times 0 \\
+&amp;= f g' + f' g.
+\end{align*}
+
+</div>
+</div></div>
+
+
+</div><div class="accordion-item" id="outline-container-org6c6cfa7-item"><h1 class="accordion-header" id="outline-container-org6c6cfa7-header"><button aria-controls="outline-container-org6c6cfa7-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-org6c6cfa7-collapse" data-bs-toggle="collapse" id="org6c6cfa7" type="button"><span class="section-number-2">4.</span> Quotient Rule</button></h1><div aria-labelledby="outline-container-org6c6cfa7-header" class="accordion-collapse collapse" id="outline-container-org6c6cfa7-collapse"><div class="accordion-body p-3 m-0" id="text-4-body">
+<div class="thm card" id="org8d8577e"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+At points where \(g \neq 0\),
+\[
+\left(\frac{f}{g}\right)' = \frac{f'g - fg'}{g^2}
+\]
+In \(\tfrac{d}{dx}\) notation,
+\[
+\frac{d}{dx} \left(\frac{f}{g}\right) = \frac{1}{g^2}\left(\frac{df}{dx} g - f \frac{dg}{dx}\right).
+\]
+</p>
+</div></div>
+<div class="eg card" id="org0559614"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Compute the derivative of \(\frac{1}{x}\).
+</p>
+<p>
+Let \(f = 1\) and \(g = x\) so that \(f' = 0\) and \(g' = 1\). Then by the quotient rule,
+</p>
+\begin{align*}
+\left(\frac{1}{x}\right)' &amp;= \left(\frac{f}{g}\right)' \\
+&amp;= \frac{f' g - fg'}{g^2} \\
+&amp;= \frac{0 \times x - 1 \times 1}{x^2} \\
+&amp;= -\frac{1}{x^2}.
+\end{align*}
+
+</div></div>
+<div class="eg card" id="org033361e"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Compute the derivative of \(\tfrac{x^2 + 1}{x - 2}\) for \(x \neq 2\).
+</p>
+<p>
+Let \(f(x) = x^2 + 1\) and \(g(x) = x-2\) so that \(f' = 2x\) and \(g' = 1\). Using the quotient rule,
+</p>
+\begin{align*}
+\left(\frac{x^2 + 1}{x-2}\right)' &amp;= \left(\frac{f}{g}\right)' \\
+&amp;= \frac{f' g - fg'}{g^2} \\
+&amp;= \frac{2x(x-2) - (x^2 + 1) \times 1}{(x-2)^2} \\
+&amp;= \frac{2x^2 - 4x - x^2 - 1}{(x-2)^2} \\
+&amp;= \frac{x^2 - 4x - 1}{(x-2)^2}
+\end{align*}
+
+</div></div>
+<div class="pf" id="org11ed950">
+<p>
+<b>Proof of Quotient Rule</b>
+</p>
+<p>
+We need to calculate the limit
+\[
+\frac{d}{dx} \left(\frac{f}{g}\right) = \lim_{\Delta x \to 0} \Delta\left(\frac{f}{g}\right).
+\]
+Similarly to the product rule we have
+\[
+\Delta\left(\frac{f}{g}\right) = \frac{f(x + \Delta x)}{g(x + \Delta x)} - \frac{f(x)}{g(x)}.
+\]
+Taking a common denominator,
+\[
+\Delta\left(\frac{f}{g}\right) = \frac{g(x) f(x + \Delta x) - f(x) g(x + \Delta x)}{g(x + \Delta x) g(x)}.
+\]
+Substituting into the difference quotient and taking the limit,
+</p>
+\begin{align*}
+\frac{d}{dx} \left(\frac{f}{g}\right) &amp;= \lim_{\Delta x \to 0} \Delta\left(\frac{f}{g}\right) \\
+&amp;= \lim_{\Delta x \to 0} \frac{g(x) f(x + \Delta x) - f(x) g(x + \Delta x)}{\Delta x g(x + \Delta x) g(x)} \\
+&amp;= \lim_{\Delta x \to 0} \left[\frac{1}{g(x+\Delta x) g(x)}\right] \left[\lim_{\Delta x \to 0} \frac{g(x) f(x + \Delta x)}{\Delta x} - \lim_{\Delta x \to 0} \frac{f(x) g(x + \Delta x)}{\Delta x}\right] \\
+&amp;= \frac{1}{(g(x))^2} \left[g(x) f'(x) - f(x) g'(x)\right].
+\end{align*}
+
+</div>
+</div></div>
+
+
+</div><div class="accordion-item" id="outline-container-orgaea9d6e-item"><h1 class="accordion-header" id="outline-container-orgaea9d6e-header"><button aria-controls="outline-container-orgaea9d6e-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-orgaea9d6e-collapse" data-bs-toggle="collapse" id="orgaea9d6e" type="button"><span class="section-number-2">5.</span> Trig Functions</button></h1><div aria-labelledby="outline-container-orgaea9d6e-header" class="accordion-collapse collapse" id="outline-container-orgaea9d6e-collapse"><div class="accordion-body p-3 m-0" id="text-5-body">
+<div class="thm card" id="org38e4cac"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<ul class="org-ul">
+<li>\(\frac{d}{dx} \sin x = \cos x\)</li>
+<li>\(\frac{d}{dx} \cos x = -\sin x\)</li>
+<li>\(\frac{d}{dx} \tan x = (\sec x)^2\)</li>
+</ul>
+</div></div>
+<p>
+We will need a lemma, sometimes known as the fundamental trig limit.
+</p>
+<div class="lem card" id="org1718704"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<ul class="org-ul">
+<li>\(\lim_{x \to 0} \frac{\sin x}{x} = 1\)</li>
+<li>\(\lim_{x \to 0} \frac{\cos x - 1}{x} = 0\)</li>
+<li>\(\lim_{x \to 0} \frac{\tan x}{x} = 1\)</li>
+</ul>
+</div></div>
+<p>
+Let's postpone the proof of the lemma for the moment and see how we may prove the theorem using the lemma.
+</p>
+<div class="pf" id="org3b630d7">
+<p>
+<b>Proof of Theorem assuming the Lemma</b>
+</p>
+<p>
+For the derivative of \(\sin\) we need to compute the limit of the difference quotient, 
+\[
+\frac{d}{dx} \sin x = \lim_{h \to 0} \frac{\sin(x+h)-\sin(x)}{h}.
+\]
+The angle addition formula gives
+\[
+\sin(x+h) = \sin(x)\cos(h) + \cos(x)\sin(h).
+\]
+Substituting into the difference quotient gives
+</p>
+\begin{align*}
+\frac{\sin(x+h)-\sin(x)}{h} &amp;= \frac{\sin(x)\cos(h) + \cos(x)\sin(h)-\sin(x)}{h} \\
+&amp;= \frac{\sin(x)[\cos(h)-1]}{h} + \frac{\cos(x)\sin(h)}{h} \\
+&amp;= \sin(x) \frac{\cos(h)-1}{h} + \cos(x) \frac{\sin(h)}{h}.
+\end{align*}
+<p>
+Taking the limit \(h\to 0\) we obtain
+</p>
+\begin{align*}
+\frac{d}{dx} \sin x &amp;= \lim_{h \to 0} \frac{\sin(x+h)-\sin(x)}{h} \\
+&amp;= \lim_{h\to 0}\left[\sin(x) \frac{\cos(h)-1}{h} + \cos(x) \frac{\sin(h)}{h}\right] \\
+&amp;= \sin(x) \lim_{h\to 0} \frac{\cos(h)-1}{h} + \cos(x) \lim_{h\to 0} \frac{\sin(h)}{h} \\
+&amp;= \cos(x).
+\end{align*}
+<p>
+The last line used the fundamental trig limits.
+</p>
+<p>
+The calculation to show that \(\tfrac{d}{dx} \cos x = - \sin x\) is similar and is left as an exercise for the reader.
+</p>
+<p>
+For \(\tan x\), as another exercise the reader should look up the angle addition formulas for \(\tan\) and then the rest is similar, though the algebra is slightly more involved. Here we use the quotient rule instead:
+</p>
+\begin{align*}
+(\tan x)' &amp;= \left(\frac{\sin x}{\cos x}\right)' \\
+&amp;= \frac{(\sin x)' \cos x - \sin x (\cos x)'}{(\cos x)^2} \\
+&amp;= \frac{(\cos x)^2 + (\sin x)^2}{(\cos x)^2} \\
+&amp;= \frac{1}{(\cos x)^2} = \left(\frac{1}{\cos x}\right)^2 \\
+&amp;= (\sec x)^2.
+\end{align*}
+<p>
+Here we used the derivatives of \(\sin, \cos\) and Pythagoras' theorem in the form \({(\sin x)^2 + (\cos x)^2 = 1}\).
+</p>
+</div>
+<p>
+Now we turn to the proof of the lemma. For convenience, here's the statement again:
+</p>
+<div class="lem card" id="orga26a73c"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<ul class="org-ul">
+<li>\(\lim_{x \to 0} \frac{\sin x}{x} = 1\)</li>
+<li>\(\lim_{x \to 0} \frac{\cos x - 1}{x} = 0\)</li>
+<li>\(\lim_{x \to 0} \frac{\tan x}{x} = 1\)</li>
+</ul>
+</div></div>
+<p>
+Let us first see how to obtain the last two limits from the first, and then we'll prove the first.
+</p>
+<div class="pf" id="orged6c25a">
+<p>
+<b>Proof of Lemma: last two limits assuming the first</b>
+</p>
+<p>
+For the second limit, assuming the first limit is true we calculate
+</p>
+\begin{align*}
+\frac{\cos x - 1}{x} &amp;= \frac{\cos x - 1}{x} \frac{\cos x + 1}{\cos x + 1} \\
+&amp;= \frac{(\cos x)^2 - 1}{x(\cos x + 1)} \\
+&amp;= \frac{(\sin x)^2}{x(\cos x + 1)} \\
+&amp;= \frac{\sin x}{x} \frac{\sin x}{\cos x + 1}.
+\end{align*}
+<p>
+Taking the limit \(x \to 0\) and using \(\lim_{x\to 0} \tfrac{\sin x}{x} = 1\) we get
+</p>
+\begin{align*}
+\lim_{x \to 0} \frac{\cos x - 1}{x} &amp;= \lim_{x \to 0} \frac{\sin x}{x} \frac{\sin x}{\cos x + 1} \\
+&amp;= \lim_{x \to 0} \frac{\sin x}{x} \lim_{x \to 0} \frac{\sin x}{\cos x + 1} \\
+&amp;= 1 \times \frac{\sin(0)}{\cos(0) + 1} \\
+&amp;= 0.
+\end{align*}
+
+<p>
+For the last limit,
+</p>
+\begin{align*}
+\lim_{x \to 0} \frac{\tan x}{x} &amp;= \lim_{x \to 0} \frac{\sin x}{\cos x} \frac{1}{x} \\
+&amp;= \lim_{x \to 0} \frac{\sin x}{x} \lim_{x \to 0} \cos x \\
+&amp;= 1 \times \cos(0) \\
+&amp;= 1.
+\end{align*} 
+
+</div>
+<p>
+Now we tackle the first limit. A picture will be quite useful.
+</p>
+<div class="figure" id="orgfc7dd69">
+<p><img alt="Limit_circle_FbN.jpeg" src="./img/Limit_circle_FbN.jpeg"/>
+</p>
+<p><span class="figure-number">Figure 1: </span><img alt="File:Limit_circle_FbN.jpeg" src="https://commons.wikimedia.org/wiki/File:Limit_circle_FbN.jpeg"/> Fly by Night (talk) (by Night Uploads), CC0, via Wikimedia Commons</p>
+</div>
+<div class="pf" id="org9d5aac3">
+<p>
+<b>Proof of Lemma: first limit</b>
+</p>
+<p>
+Referring to the figure, the circle is the unit circle centred on the origin \(O\). Let \(\theta\) denote the angle \(\angle AOB\). Since the points \(A, B\) are in the first quadrant, \(\theta \in (0, \pi/2)\) and \(\sin \theta &gt; 0\). Since the circle is the unit circle, we also have \(|OA| = |OB| = 1\).
+</p>
+<p>
+The area of the inner triangle \(T\) with vertices \(O\), \(A\), \(B\) is
+\[
+\mathrm{Area}(T) = \frac{1}{2} |OA| |OB| \sin \theta = \frac{1}{2} \sin \theta.
+\]
+</p>
+<p>
+The area of the circular sector \(S\) with vertices \(O\), \(A\), \(B\) is
+\[
+\mathrm{Area} (S) = \frac{\theta}{2}.
+\]
+</p>
+<p>
+Finally the area of the outer triangle \(R\) with vertices \(O\), \(A\), \(C\) is
+\[
+\mathrm{Area} (R) = \frac{1}{2} |OA| |OC| = \frac{1}{2} \tan\theta.
+\]
+</p>
+<p>
+Since \(T \subseteq S \subseteq R\) we have
+\[
+\mathrm{Area} (T) \leq \mathrm{Area} (S) \leq \mathrm{Area} (R).
+\]
+That is
+\[
+\frac{1}{2} \sin\theta \leq \frac{1}{2} \theta \leq \frac{1}{2} \tan\theta.
+\]
+We can cancel the common factor of \(\tfrac{1}{2}\). Note that all of these quantities are positive; thus taking reciprocals reverses the inequalities:
+\[
+\frac{1}{\tan \theta} \leq \frac{1}{\theta} \leq \frac{1}{\sin\theta}.
+\]
+Multiplying by \(\sin\theta &gt; 0\) we get
+\[
+\cos\theta = \frac{\sin\theta}{\tan \theta} \leq \frac{\sin\theta}{\theta} \leq 1.
+\]
+</p>
+<p>
+Now we apply the squeeze theorem noting that the left and right sides of the inequality converge to \(1\) as \(\theta \to 0\) hence
+\[
+\lim_{\theta \to 0^+} \frac{\sin\theta}{\theta} = 1.
+\]
+</p>
+<p>
+For the limit from the left, we take \(\theta \in (-\pi/2, 0)\) and note that \(-\theta \in (0, \pi/2\) and \(\sin(-\theta) = -\sin(\theta)\). Taking the limit from the left then gives
+</p>
+\begin{align*}
+\lim_{\theta\to 0^-} \frac{\sin\theta}{\theta} &amp;= \lim_{\theta \to 0^+} \frac{\sin(-\theta)}{-\theta} \\
+&amp;= \lim_{\theta \to 0^+} \frac{-\sin\theta}{-\theta} \\
+&amp;= \lim_{\theta \to 0^+} \frac{\sin\theta}{\theta} \\
+&amp;= 1.
+\end{align*}
+
+<p>
+Thus
+\[
+\lim_{\theta \to 0} \frac{\sin\theta}{\theta} = 1.
+\]
+This is precisely theorem statement after relabelling \(\theta\) as \(x\).
+</p>
+</div>
+</div></div>
+
+
+</div></div>

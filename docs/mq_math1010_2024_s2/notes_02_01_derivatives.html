@@ -1,0 +1,259 @@
+---
+layout: notes
+title: Notes 02.01 Derivatives
+---
+
+<div class="accordion"><div class="accordion-item" id="outline-container-org7ca77d8-item"><h1 class="accordion-header" id="outline-container-org7ca77d8-header"><button aria-controls="outline-container-org7ca77d8-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-org7ca77d8-collapse" data-bs-toggle="collapse" id="org7ca77d8" type="button"><span class="section-number-2">1.</span> Introduction</button></h1><div aria-labelledby="outline-container-org7ca77d8-header" class="accordion-collapse collapse" id="outline-container-org7ca77d8-collapse"><div class="accordion-body p-3 m-0" id="text-1-body">
+<p>
+The derivative of a function measures the sensitivity of the function to change; it is the instantaneous rate of change of the function. Geometrically, the derivative is the slope of the tangent line.
+</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Derivative">Wikipedia Article on Derivatives</a>
+</p>
+</div>
+
+
+<div class="outline-3" id="outline-container-org46c2693">
+<h3 id="org46c2693">Lecture Materials</h3>
+<div class="outline-text-3" id="text-org46c2693">
+<ul class="org-ul">
+<li>These notes: <a href="https://pabryan.github.io/notes/mq_math1010_2024_s2/notes_02_01_derivatives.pdf">PDF</a></li>
+<li>Slides: <a href="https://pabryan.github.io/slides/mq_math1010_2024_s2/lecture_02_01_derivatives/">Online</a></li>
+<li>Slides <a href="https://pabryan.github.io/slides/mq_math1010_2024_s2/lecture_02_01_derivatives.pdf">PDF</a></li>
+</ul>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org4bcf615">
+<h3 id="org4bcf615">References: <a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)">Calculus OpenStax</a></h3>
+<div class="outline-text-3" id="text-org4bcf615">
+<ul class="org-ul">
+<li><a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/03%3A_Derivatives/3.01%3A_Defining_the_Derivative">3.1: Defining the Derivative</a></li>
+<li><a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/03%3A_Derivatives/3.02%3A_The_Derivative_as_a_Function">3.2: The Derivative as a Function</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="accordion-item" id="outline-container-org94ae952-item"><h1 class="accordion-header" id="outline-container-org94ae952-header"><button aria-controls="outline-container-org94ae952-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-org94ae952-collapse" data-bs-toggle="collapse" id="org94ae952" type="button"><span class="section-number-2">2.</span> The derivative</button></h1><div aria-labelledby="outline-container-org94ae952-header" class="accordion-collapse collapse" id="outline-container-org94ae952-collapse"><div class="accordion-body p-3 m-0" id="text-2-body">
+<div class="defn card" id="orgb970633"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Let \(f : (a, b) \to \mathbb{R}\) be a function, and let \(x \in (a, b)\). Then \(f\) is <i>differentiable</i> at \(x\) provided the limit
+\[
+\lim_{h\to 0} \frac{f(x+h) - f(x)}{h}
+\]
+exists. In that case, we call this limit the <i>derivative</i> of \(f\) at \(x\).
+</p>
+</div></div>
+<p>
+There are several different ways of writing the derivative. These include,
+</p>
+<ul class="org-ul">
+<li>\(\frac{df}{dx}\)</li>
+<li>\(\frac{d}{dx} f\)</li>
+<li>\(f'\)</li>
+<li>\(\dot{f}\)</li>
+</ul>
+<div class="eg card" id="orgd89c587"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Show that
+\[
+\frac{d}{dx} x = 1
+\]
+</p>
+
+\begin{align*}
+\lim_{h\to 0} \frac{f(x+h) - f(x)}{h} &amp;= \lim_{h\to 0} \frac{x+h - x}{h} \\
+&amp;= \lim_{h\to 0} \frac{h}{h} \\
+&amp;= \lim_{h\to 0} 1 = 1
+\end{align*}
+
+</div></div>
+<div class="eg card" id="org828c666"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Show that
+\[
+\frac{d}{dx} x^2 = 2x
+\]
+</p>
+
+\begin{align*}
+\lim_{h\to 0} \frac{f(x+h) - f(x)}{h} &amp;= \lim_{h\to 0} \frac{(x+h)^2 - x^2}{h} \\
+&amp;= \lim_{h\to 0} \frac{x^2 + 2xh + h^2 - x^2}{h} \\
+&amp;= \lim_{h\to 0} \frac{2xh + h^2}{h} \\
+&amp;= \lim_{h\to 0} (2x + h) = 2x.
+\end{align*}
+
+</div></div>
+</div></div>
+
+
+</div><div class="accordion-item" id="outline-container-orgdabe620-item"><h1 class="accordion-header" id="outline-container-orgdabe620-header"><button aria-controls="outline-container-orgdabe620-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-orgdabe620-collapse" data-bs-toggle="collapse" id="orgdabe620" type="button"><span class="section-number-2">3.</span> Secant Line</button></h1><div aria-labelledby="outline-container-orgdabe620-header" class="accordion-collapse collapse" id="outline-container-orgdabe620-collapse"><div class="accordion-body p-3 m-0" id="text-3-body">
+<div class="defn card" id="org7ace4a0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+The <i>secant line</i> for \(f(x)\) between \(x_1, x_2\) is the straight line though the points in the plane, \((x_1, f(x_1))\) and \((x_2, f(x_2))\).
+</p>
+</div></div>
+<div class="defn card" id="org7e98f1f"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+The <i>difference</i> in \(x\) is
+\[
+\Delta x = x_2 - x_1.
+\]
+</p>
+<p>
+The <i>difference</i> in \(f\) is
+\[
+\Delta f = f(x_2) - f(x_1).
+\]
+</p>
+</div></div>
+<p>
+The character \(\Delta\) is a Greek capital Delta. Presumably \(\Delta\) is for the \(D\) in "Difference".
+</p>
+<div class="defn card" id="org94734bb"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+The quantity \(\tfrac{\Delta f}{\Delta x}\) is called the <i>difference quotient</i>.
+</p>
+</div></div>
+<div class="lem card" id="org0193082"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+The slope of the secant line is
+\[
+\frac{\Delta f}{\Delta x} = \frac{f(x_2) - f(x_1)}{x_2 - x_1}.
+\]
+</p>
+</div></div>
+<div class="eg card" id="org72f212b"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Let \(f(x) = x^2\) and let \(x_1 = 2\), \(x_2 = 3\). The secant line is the line through the points \((2, 4)\) and \((3, 9)\). It has slope
+\[
+m = \frac{\Delta f}{\Delta x} = \frac{9-4}{3-2} = 5
+\]
+To determine the equation of the line in the form \(y = mx + b\), let us first choose any fixed point on the line - let's take \((2, 4)\). Then any point \((x, y)\) on the line satisfies
+\[
+\frac{y-4}{x-2} = 5.
+\]
+Thus
+\[
+y = 5x - 6
+\]
+</p>
+</div></div>
+</div></div>
+
+
+</div><div class="accordion-item" id="outline-container-org9d05847-item"><h1 class="accordion-header" id="outline-container-org9d05847-header"><button aria-controls="outline-container-org9d05847-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-org9d05847-collapse" data-bs-toggle="collapse" id="org9d05847" type="button"><span class="section-number-2">4.</span> Tangent Line</button></h1><div aria-labelledby="outline-container-org9d05847-header" class="accordion-collapse collapse" id="outline-container-org9d05847-collapse"><div class="accordion-body p-3 m-0" id="text-4-body">
+<div class="defn card" id="orgffb544f"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+The <i>tangent line</i> at \(x\) is the line through the point in the plane, \((x, f(x))\) with slope \(f'(x)\).
+</p>
+</div></div>
+<div class="lem card" id="org665dbfa"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+\[
+f'(x_1) = \lim_{x_2 \to x_1} \frac{f(x_2) - f(x_1)}{x_2 - x_1} = \lim_{\Delta x \to 0} \frac{\Delta f}{\Delta x}.
+\]
+</p>
+</div></div>
+<div class="pf" id="org3780578">
+<p>
+Let \(\Delta x = x_2 - x_1\). Then
+\[
+x_1 + \Delta x = x_1 + (x_2 - x_1) = x_2
+\]
+and
+\[
+\Delta f = f(x_2) - f(x_1) = f(x_1 + \Delta x) - f(x_1).
+\]
+Moreover,
+\[
+\lim_{\Delta x \to 0} x_2 = \lim_{\Delta x \to 0} (x_1 + \Delta x) = x_1,
+\]
+and conversely,
+\[
+\lim_{x_2 \to x_1} \Delta x = \lim_{x_2 \to x_1} x_2 - x_1 = x_1 - x_1 = 0.
+\]
+</p>
+<p>
+Letting \(h = \Delta x\) we get that the derivative is
+</p>
+\begin{align*}
+f'(x) &amp;= \lim_{h\to 0} \frac{f(x+h) - f(x)}{h} \\
+&amp;= \lim_{\Delta x\to 0} \frac{f(x+\Delta x) - f(x)}{\Delta x} \\
+&amp;= \lim_{\Delta x \to 0} \frac{\Delta f}{\Delta x} \\
+&amp;= \lim_{x_2 \to x_1} \frac{f(x_2) - f(x_1)}{x_2 - x_1}.
+\end{align*}
+
+</div>
+<div class="thm card" id="org811e826"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+The tangent line at \(x\) is the limit of the secant lines as \(x_2 \to x_1\).
+</p>
+</div></div>
+<div class="pf" id="org75052e8">
+<p>
+The slope of the secant line is \(\tfrac{\Delta f}{\Delta x}\). Taking the limit \(\Delta x \to 0\) is the same as taking the limit \(x_2 \to x_1\). Thus by the previous lemma, the slopes of the secant lines converge to the slope of the tangent line as \(x_2 \to x_1\). Since the tangent line, and all the secant lines pass through the point \((x_1, f(x_1))\), the secant lines converge to the tangent line as \(x_2 \to x_1\).
+</p>
+</div>
+<div class="eg card" id="org5555a4f"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Let \(f(x) = x^2\) and let \(x_1 = 2\). For any \(x_2 \neq 2\), let \(\Delta x = x_2 - 2 \neq 0\). Then
+</p>
+\begin{align*}
+\Delta f &amp;= f(2+\Delta x) - f(2) = (2+\Delta x)^2 - 2^2 \\
+&amp;= 4 + 4 \Delta x + (\Delta x)^2 - 4 \\
+&amp;= 4 \Delta x + (\Delta x)^2.
+\end{align*}
+
+<p>
+The secant line has slope
+\[
+\frac{\Delta f}{\Delta x} = \frac{4 \Delta x + (\Delta x)^2}{\Delta x} = 4 + \Delta x.
+\]
+Taking the limit \(\Delta x \to 0\), the tangent line has slope
+</p>
+\begin{align*}
+f'(x) &amp;= \lim_{\Delta x \to 0} \frac{\Delta f}{\Delta x} \\
+&amp;= \lim_{\Delta x \to 0} (4 + \Delta x) \\
+&amp;= 4.
+\end{align*}
+
+</div></div>
+</div></div>
+
+
+</div><div class="accordion-item" id="outline-container-org44905b7-item"><h1 class="accordion-header" id="outline-container-org44905b7-header"><button aria-controls="outline-container-org44905b7-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-org44905b7-collapse" data-bs-toggle="collapse" id="org44905b7" type="button"><span class="section-number-2">5.</span> Differentiability Implies Continuity</button></h1><div aria-labelledby="outline-container-org44905b7-header" class="accordion-collapse collapse" id="outline-container-org44905b7-collapse"><div class="accordion-body p-3 m-0" id="text-5-body">
+<div class="thm card" id="org799b966"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+If \(f\) is differentiable at \(x_0\), then \(f\) is also continuous at \(x_0\).
+</p>
+</div></div>
+<div class="pf" id="orgaf8b97a">
+<p>
+The assumption is that the limit,
+\[
+f'(x_)) = \lim_{h\to 0} \frac{f(x_0 + h) - f(x_0)}{h}
+\]
+exists. We want to show that
+\[
+\lim_{x\to x_0} f(x) = f(x_0).
+\]
+If we let \(x = x_0 + h\), just as with the tangent line, taking the limit \(h \to 0\) is the same as taking the limit \(x \to x_0\).
+</p>
+<p>
+Remember that when taking the limit \(x \to x_0\), we assume that \(x \neq x_0\). Thus \(x - x_0 \neq 0\) and we can perform the following calculation:
+</p>
+\begin{align*}
+\lim_{x\to x_0} [f(x) - f(x_0)] &amp;= \lim_{x\to x_0} [f(x) - f(x_0)] \frac{x-x_0}{x-x_0} \\
+&amp;= \lim_{x\to x_0} \frac{f(x) - f(x_0)}{x-x_0} {x-x_0} \\
+&amp;= \lim_{\Delta x \to 0} \frac{\Delta f}{\Delta x} \Delta x \\
+&amp;= f'(x_0) \times 0 = 0.
+\end{align*}
+
+<p>
+But \(\lim_{x\to x_0} [f(x) - f(x_0)] = 0\) implies that \(\lim_{x\to x_0} f(x) = f(x_0)\) and hence \(f\) is continuous at \(x_0\).
+</p>
+</div>
+</div></div>
+
+
+</div></div>
