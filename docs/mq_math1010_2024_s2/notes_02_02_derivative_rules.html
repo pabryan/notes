@@ -3,16 +3,16 @@ layout: notes
 title: Notes 02.02 Derivative Rules
 ---
 
-<div class="accordion"><div class="accordion-item" id="outline-container-org2127e6c-item"><h1 class="accordion-header" id="outline-container-org2127e6c-header"><button aria-controls="outline-container-org2127e6c-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-org2127e6c-collapse" data-bs-toggle="collapse" id="org2127e6c" type="button"><span class="section-number-2">1.</span> Introduction</button></h1><div aria-labelledby="outline-container-org2127e6c-header" class="accordion-collapse collapse" id="outline-container-org2127e6c-collapse"><div class="accordion-body p-3 m-0" id="text-1-body">
+<div class="accordion"><div class="accordion-item" id="outline-container-orga994073-item"><h1 class="accordion-header" id="outline-container-orga994073-header"><button aria-controls="outline-container-orga994073-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-orga994073-collapse" data-bs-toggle="collapse" id="orga994073" type="button"><span class="section-number-2">1.</span> Introduction</button></h1><div aria-labelledby="outline-container-orga994073-header" class="accordion-collapse collapse" id="outline-container-orga994073-collapse"><div class="accordion-body p-3 m-0" id="text-1-body">
 <p>
 We establish some fundamental rules for differentiation. This allows us to differentiate complex functions by breaking them down into simpler pieces and differentiating those pieces. In this way we see how to differentiate, polynomials and rational functions (quotients of polynomials). We also investigate the derivatives of trigonometric functions.
 </p>
 </div>
 
 
-<div class="outline-3" id="outline-container-orga46013c">
-<h3 id="orga46013c">Lecture Materials</h3>
-<div class="outline-text-3" id="text-orga46013c">
+<div class="outline-3" id="outline-container-orga920a7b">
+<h3 id="orga920a7b">Lecture Materials</h3>
+<div class="outline-text-3" id="text-orga920a7b">
 <ul class="org-ul">
 <li>These notes: <a href="https://pabryan.github.io/notes/mq_math1010_2024_s2/notes_02_02_derivative_rules.pdf">PDF</a></li>
 <li>Slides: <a href="https://pabryan.github.io/slides/mq_math1010_2024_s2/lecture_02_02_derivative_rules/">Online</a></li>
@@ -20,9 +20,9 @@ We establish some fundamental rules for differentiation. This allows us to diffe
 </ul>
 </div>
 </div>
-<div class="outline-3" id="outline-container-orgad08eb9">
-<h3 id="orgad08eb9">References: <a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)">Calculus OpenStax</a></h3>
-<div class="outline-text-3" id="text-orgad08eb9">
+<div class="outline-3" id="outline-container-org3edd7bf">
+<h3 id="org3edd7bf">References: <a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)">Calculus OpenStax</a></h3>
+<div class="outline-text-3" id="text-org3edd7bf">
 <ul class="org-ul">
 <li><a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/03%3A_Derivatives/3.03%3A_Differentiation_Rules">3.3: Differentiation Rules</a></li>
 <li><a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/03%3A_Derivatives/3.05%3A_Derivatives_of_Trigonometric_Functions">3.5: Derivatives of Trigonometric Functions</a></li>
@@ -30,20 +30,22 @@ We establish some fundamental rules for differentiation. This allows us to diffe
 </div>
 </div>
 </div>
-</div><div class="accordion-item" id="outline-container-orgf941bcc-item"><h1 class="accordion-header" id="outline-container-orgf941bcc-header"><button aria-controls="outline-container-orgf941bcc-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-orgf941bcc-collapse" data-bs-toggle="collapse" id="orgf941bcc" type="button"><span class="section-number-2">2.</span> Linearity</button></h1><div aria-labelledby="outline-container-orgf941bcc-header" class="accordion-collapse collapse" id="outline-container-orgf941bcc-collapse"><div class="accordion-body p-3 m-0" id="text-2-body">
-<div class="thm card" id="org6f37f82"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+</div><div class="accordion-item" id="outline-container-orge570ff3-item"><h1 class="accordion-header" id="outline-container-orge570ff3-header"><button aria-controls="outline-container-orge570ff3-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-orge570ff3-collapse" data-bs-toggle="collapse" id="orge570ff3" type="button"><span class="section-number-2">2.</span> Linearity</button></h1><div aria-labelledby="outline-container-orge570ff3-header" class="accordion-collapse collapse" id="outline-container-orge570ff3-collapse"><div class="accordion-body p-3 m-0" id="text-2-body">
+<div class="thm card" id="org35cb0c8"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 The derivative is <i>linear</i>. That is for any functions \(f, g\) and any constants \(A, B \in \mathbb{R}\),
 \[
 (Af + Bg)' = Af' + Bg'.
 \]
+</p>
+<p>
 In \(\tfrac{d}{dx}\) notation
 \[
 \frac{d}{dx} (Af + Bg) = A \frac{df}{dx} + B \frac{dg}{dx}.
 \]
 </p>
 </div></div>
-<div class="eg card" id="orga8db3d5"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="org61b16d8"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Compute the derivative of
 \[
@@ -60,7 +62,7 @@ We've already seen that \(\tfrac{d}{dx} x^2 = 2x\) and \(\tfrac{d}{dx} x = 1\). 
 \end{align*}
 
 </div></div>
-<div class="pf card" id="orga1b85d1"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="pf card" id="org8067ee7"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 <b>Proof of Linearity</b>
 </p>
@@ -79,19 +81,21 @@ We can do this directly using the fact that limits are linear:
 </div></div>
 
 
-</div><div class="accordion-item" id="outline-container-org53be8d9-item"><h1 class="accordion-header" id="outline-container-org53be8d9-header"><button aria-controls="outline-container-org53be8d9-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-org53be8d9-collapse" data-bs-toggle="collapse" id="org53be8d9" type="button"><span class="section-number-2">3.</span> Product Rule</button></h1><div aria-labelledby="outline-container-org53be8d9-header" class="accordion-collapse collapse" id="outline-container-org53be8d9-collapse"><div class="accordion-body p-3 m-0" id="text-3-body">
-<div class="thm card" id="org88a17ab"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+</div><div class="accordion-item" id="outline-container-orga92f73c-item"><h1 class="accordion-header" id="outline-container-orga92f73c-header"><button aria-controls="outline-container-orga92f73c-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-orga92f73c-collapse" data-bs-toggle="collapse" id="orga92f73c" type="button"><span class="section-number-2">3.</span> Product Rule</button></h1><div aria-labelledby="outline-container-orga92f73c-header" class="accordion-collapse collapse" id="outline-container-orga92f73c-collapse"><div class="accordion-body p-3 m-0" id="text-3-body">
+<div class="thm card" id="org0da120f"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 \[
 (fg)' = fg' + f'g.
 \]
+</p>
+<p>
 In \(\tfrac{d}{dx}\) notation,
 \[
 \frac{d}{dx} (fg) = f \frac{dg}{dx} + g \frac{df}{dx}.
 \]
 </p>
 </div></div>
-<div class="eg card" id="org5e35544"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="orgb31afd0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Show that \(\tfrac{d}{dx} x^2 = 2x\).
 </p>
@@ -105,7 +109,7 @@ Let \(f(x) = x = g(x)\) so that \(fg = x^2\) and \(f' = g' = 1\). By the product
 \end{align*}
 
 </div></div>
-<div class="eg card" id="orgd32b998"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="orgde689db"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Show that \(\tfrac{d}{dx} x^3 = 3x^2\).
 </p>
@@ -119,7 +123,7 @@ Let \(f(x) = x^2\) and \(g(x) = x\) so that \(fg = x^3\), \(f' = 2x\), and \(g' 
 \end{align*}
 
 </div></div>
-<div class="pf card" id="orgf2b9221"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="pf card" id="org841890e"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 <b>Proof of Product Rule</b>
 </p>
@@ -161,20 +165,22 @@ Taking the limit of the difference quotient,
 </div></div>
 
 
-</div><div class="accordion-item" id="outline-container-org7103771-item"><h1 class="accordion-header" id="outline-container-org7103771-header"><button aria-controls="outline-container-org7103771-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-org7103771-collapse" data-bs-toggle="collapse" id="org7103771" type="button"><span class="section-number-2">4.</span> Quotient Rule</button></h1><div aria-labelledby="outline-container-org7103771-header" class="accordion-collapse collapse" id="outline-container-org7103771-collapse"><div class="accordion-body p-3 m-0" id="text-4-body">
-<div class="thm card" id="org86a416a"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+</div><div class="accordion-item" id="outline-container-org616ad06-item"><h1 class="accordion-header" id="outline-container-org616ad06-header"><button aria-controls="outline-container-org616ad06-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-org616ad06-collapse" data-bs-toggle="collapse" id="org616ad06" type="button"><span class="section-number-2">4.</span> Quotient Rule</button></h1><div aria-labelledby="outline-container-org616ad06-header" class="accordion-collapse collapse" id="outline-container-org616ad06-collapse"><div class="accordion-body p-3 m-0" id="text-4-body">
+<div class="thm card" id="org0df858e"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 At points where \(g \neq 0\),
 \[
 \left(\frac{f}{g}\right)' = \frac{f'g - fg'}{g^2}
 \]
+</p>
+<p>
 In \(\tfrac{d}{dx}\) notation,
 \[
 \frac{d}{dx} \left(\frac{f}{g}\right) = \frac{1}{g^2}\left(\frac{df}{dx} g - f \frac{dg}{dx}\right).
 \]
 </p>
 </div></div>
-<div class="eg card" id="org3c04bbb"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="org5e38e2a"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Compute the derivative of \(\frac{1}{x}\).
 </p>
@@ -189,7 +195,7 @@ Let \(f = 1\) and \(g = x\) so that \(f' = 0\) and \(g' = 1\). Then by the quoti
 \end{align*}
 
 </div></div>
-<div class="eg card" id="org943ca85"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="org623519d"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Compute the derivative of \(\tfrac{x^2 + 1}{x - 2}\) for \(x \neq 2\).
 </p>
@@ -205,7 +211,7 @@ Let \(f(x) = x^2 + 1\) and \(g(x) = x-2\) so that \(f' = 2x\) and \(g' = 1\). Us
 \end{align*}
 
 </div></div>
-<div class="pf card" id="org9b51be7"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="pf card" id="org3203c4f"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 <b>Proof of Quotient Rule</b>
 </p>
@@ -214,14 +220,20 @@ We need to calculate the limit
 \[
 \frac{d}{dx} \left(\frac{f}{g}\right) = \lim_{\Delta x \to 0} \Delta\left(\frac{f}{g}\right).
 \]
+</p>
+<p>
 Similarly to the product rule we have
 \[
 \Delta\left(\frac{f}{g}\right) = \frac{f(x + \Delta x)}{g(x + \Delta x)} - \frac{f(x)}{g(x)}.
 \]
+</p>
+<p>
 Taking a common denominator,
 \[
 \Delta\left(\frac{f}{g}\right) = \frac{g(x) f(x + \Delta x) - f(x) g(x + \Delta x)}{g(x + \Delta x) g(x)}.
 \]
+</p>
+<p>
 Substituting into the difference quotient and taking the limit,
 </p>
 \begin{align*}
@@ -235,8 +247,8 @@ Substituting into the difference quotient and taking the limit,
 </div></div>
 
 
-</div><div class="accordion-item" id="outline-container-orgcf0295b-item"><h1 class="accordion-header" id="outline-container-orgcf0295b-header"><button aria-controls="outline-container-orgcf0295b-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-orgcf0295b-collapse" data-bs-toggle="collapse" id="orgcf0295b" type="button"><span class="section-number-2">5.</span> Trig Functions</button></h1><div aria-labelledby="outline-container-orgcf0295b-header" class="accordion-collapse collapse" id="outline-container-orgcf0295b-collapse"><div class="accordion-body p-3 m-0" id="text-5-body">
-<div class="thm card" id="orgf6f939b"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+</div><div class="accordion-item" id="outline-container-org40c0d1c-item"><h1 class="accordion-header" id="outline-container-org40c0d1c-header"><button aria-controls="outline-container-org40c0d1c-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-org40c0d1c-collapse" data-bs-toggle="collapse" id="org40c0d1c" type="button"><span class="section-number-2">5.</span> Trig Functions</button></h1><div aria-labelledby="outline-container-org40c0d1c-header" class="accordion-collapse collapse" id="outline-container-org40c0d1c-collapse"><div class="accordion-body p-3 m-0" id="text-5-body">
+<div class="thm card" id="org8a61652"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <ul class="org-ul">
 <li>\(\frac{d}{dx} \sin x = \cos x\)</li>
 <li>\(\frac{d}{dx} \cos x = -\sin x\)</li>
@@ -246,7 +258,7 @@ Substituting into the difference quotient and taking the limit,
 <p>
 We will need a lemma, sometimes known as the fundamental trig limit.
 </p>
-<div class="lem card" id="org111dd96"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="lem card" id="org254d45b"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <ul class="org-ul">
 <li>\(\lim_{x \to 0} \frac{\sin x}{x} = 1\)</li>
 <li>\(\lim_{x \to 0} \frac{\cos x - 1}{x} = 0\)</li>
@@ -256,7 +268,7 @@ We will need a lemma, sometimes known as the fundamental trig limit.
 <p>
 Let's postpone the proof of the lemma for the moment and see how we may prove the theorem using the lemma.
 </p>
-<div class="pf card" id="org116cc49"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="pf card" id="orgb0d78a6"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 <b>Proof of Theorem assuming the Lemma</b>
 </p>
@@ -265,10 +277,14 @@ For the derivative of \(\sin\) we need to compute the limit of the difference qu
 \[
 \frac{d}{dx} \sin x = \lim_{h \to 0} \frac{\sin(x+h)-\sin(x)}{h}.
 \]
+</p>
+<p>
 The angle addition formula gives
 \[
 \sin(x+h) = \sin(x)\cos(h) + \cos(x)\sin(h).
 \]
+</p>
+<p>
 Substituting into the difference quotient gives
 </p>
 \begin{align*}
@@ -308,7 +324,7 @@ Here we used the derivatives of \(\sin, \cos\) and Pythagoras' theorem in the fo
 <p>
 Now we turn to the proof of the lemma. For convenience, here's the statement again:
 </p>
-<div class="lem card" id="orgde004ab"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="lem card" id="orgdce10bd"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <ul class="org-ul">
 <li>\(\lim_{x \to 0} \frac{\sin x}{x} = 1\)</li>
 <li>\(\lim_{x \to 0} \frac{\cos x - 1}{x} = 0\)</li>
@@ -318,7 +334,7 @@ Now we turn to the proof of the lemma. For convenience, here's the statement aga
 <p>
 Let us first see how to obtain the last two limits from the first, and then we'll prove the first.
 </p>
-<div class="pf card" id="org919b037"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="pf card" id="orgfe3fdec"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 <b>Proof of Lemma: last two limits assuming the first</b>
 </p>
@@ -355,12 +371,12 @@ For the last limit,
 <p>
 Now we tackle the first limit. A picture will be quite useful.
 </p>
-<div class="figure" id="org36d0a21">
+<div class="figure" id="org4fad097">
 <p><img alt="Limit_circle_FbN.jpeg" src="../img/Limit_circle_FbN.jpeg"/>
 </p>
 <p><span class="figure-number">Figure 1: </span>By Fly by Night (talk) (by Night Uploads), CC0, via Wikimedia Commons <a href="https://commons.wikimedia.org/wiki/File:Limit_circle_FbN.jpeg">https://commons.wikimedia.org/wiki/File:Limit_circle_FbN.jpeg</a></p>
 </div>
-<div class="pf card" id="orgacc07ee"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="pf card" id="org62d38ce"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 <b>Proof of Lemma: first limit</b>
 </p>
@@ -430,8 +446,8 @@ This is precisely theorem statement after relabelling \(\theta\) as \(x\).
 </div></div>
 
 
-</div><div class="accordion-item" id="outline-container-org873a274-item"><h1 class="accordion-header" id="outline-container-org873a274-header"><button aria-controls="outline-container-org873a274-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-org873a274-collapse" data-bs-toggle="collapse" id="org873a274" type="button"><span class="section-number-2">6.</span> Exponential Function</button></h1><div aria-labelledby="outline-container-org873a274-header" class="accordion-collapse collapse" id="outline-container-org873a274-collapse"><div class="accordion-body p-3 m-0" id="text-6-body">
-<div class="thm card" id="orgc35d123"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+</div><div class="accordion-item" id="outline-container-org83ceb96-item"><h1 class="accordion-header" id="outline-container-org83ceb96-header"><button aria-controls="outline-container-org83ceb96-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-org83ceb96-collapse" data-bs-toggle="collapse" id="org83ceb96" type="button"><span class="section-number-2">6.</span> Exponential Function</button></h1><div aria-labelledby="outline-container-org83ceb96-header" class="accordion-collapse collapse" id="outline-container-org83ceb96-collapse"><div class="accordion-body p-3 m-0" id="text-6-body">
+<div class="thm card" id="org5ec0d19"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 \[
 \frac{d}{dx} e^x = e^x
@@ -441,7 +457,7 @@ This is precisely theorem statement after relabelling \(\theta\) as \(x\).
 <p>
 Just as with Trig functions, there is a fundamental limit for the exponential function.
 </p>
-<div class="lem card" id="org262e415"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="lem card" id="org1232379"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 \[
 \lim_{h \to 0} \frac{e^h - 1}{h} = 1.
@@ -451,7 +467,7 @@ Just as with Trig functions, there is a fundamental limit for the exponential fu
 <p>
 We won't prove this here as the proof requires a little more calculus than we develop in this course. But with the lemma in hand, we may prove the theorem.
 </p>
-<div class="pf card" id="orgc1f5674"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="pf card" id="org7ba2c0d"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 <b>Proof of Theorem assuming the Lemma</b>
 </p>
