@@ -1,0 +1,200 @@
+---
+layout: notes
+title: Notes 04.02 Fundamental Theorem of Calculus
+---
+
+<div class="accordion"><div class="accordion-item" id="outline-container-notes_04_02_ftc-introduction-item"><h1 class="accordion-header" id="outline-container-notes_04_02_ftc-introduction-header"><button aria-controls="outline-container-notes_04_02_ftc-introduction-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-notes_04_02_ftc-introduction-collapse" data-bs-toggle="collapse" id="notes_04_02_ftc-introduction" type="button"><span class="section-number-2">1.</span> Introduction</button></h1><div aria-labelledby="outline-container-notes_04_02_ftc-introduction-header" class="accordion-collapse collapse" id="outline-container-notes_04_02_ftc-introduction-collapse"><div class="accordion-body p-3 m-0" id="text-notes_04_02_ftc-introduction-body">
+<p>
+To actually compute integrals, we generally use the Fundamental Theorem of Calculus (FTC) rather than directly via the definition.
+</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus">Wikipedia page on FTC</a>
+</p>
+</div>
+
+<div class="outline-3" id="outline-container-orgeb6a963">
+<h3 id="orgeb6a963">Lecture Materials</h3>
+<div class="outline-text-3" id="text-orgeb6a963">
+<ul class="org-ul">
+<li>These notes: <a href="https://pabryan.github.io/notes/mq_math1010_2024_s2/notes_04_02_ftc.pdf">PDF</a></li>
+<li>Slides: <a href="https://pabryan.github.io/slides/mq_math1010_2024_s2/lecture_04_02_ftc/">Online</a></li>
+<li>Slides <a href="https://pabryan.github.io/slides/mq_math1010_2024_s2/lecture_04_02_ftc.pdf">PDF</a></li>
+</ul>
+</div>
+</div>
+<div class="outline-3" id="outline-container-org6e734a3">
+<h3 id="org6e734a3">References: <a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)">Calculus OpenStax</a></h3>
+<div class="outline-text-3" id="text-org6e734a3">
+<ul class="org-ul">
+<li><a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/05%3A_Integration/5.03%3A_The_Fundamental_Theorem_of_Calculus">5.3: The Fundamental Theorem of Calculus</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="accordion-item" id="outline-container-notes_04_02_integral_ftc-ftc-item"><h1 class="accordion-header" id="outline-container-notes_04_02_integral_ftc-ftc-header"><button aria-controls="outline-container-notes_04_02_integral_ftc-ftc-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-notes_04_02_integral_ftc-ftc-collapse" data-bs-toggle="collapse" id="notes_04_02_integral_ftc-ftc" type="button"><span class="section-number-2">2.</span> Fundamental Theorem of Calculus</button></h1><div aria-labelledby="outline-container-notes_04_02_integral_ftc-ftc-header" class="accordion-collapse collapse" id="outline-container-notes_04_02_integral_ftc-ftc-collapse"><div class="accordion-body p-3 m-0" id="text-notes_04_02_integral_ftc-ftc-body">
+<div class="thm card" id="org8a156ec"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Let \(F\) be a differentiable function with \(F'\) continuous. Then
+\[
+\int_a^b F'(x) dx = F|_a^b = F(b) - F(a)
+\]
+</p>
+</div></div>
+<p>
+Not here that \(F|_a^b\) is just shorthand notation for \(F(b) - F(a)\).
+</p>
+<p>
+The proof uses the mean value theorem for integrals which we haven't covered, so we omit the proof. Intuitively, the integral of \(F'\) is adding up all the parts of \(F'\) over small intervals. But \(F'\) is the change in \(F\) over such intervals. We get teh integral \(\int_a^b F'(x) dx\) by adding up all these small changes, hence the integral equals the total change in \(F\), namely \(F(b) - F(a)\).
+</p>
+<div class="eg card" id="org31e1f02"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Let \(F'(x) = 2x\). We already know that \(F(x) = x^2\) satisifies \(F'(x) = 2x\) hence by the theorem,
+</p>
+\begin{align*}
+\int_2^5 2x dx &amp;= \int_2^5 F'(x) dx \\
+&amp;= F|_2^5 = x^2|_2^5 = 5^2 - 2^2 = 21.
+\end{align*}
+
+</div></div>
+<div class="eg card" id="org77d84b6"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Let \(F'(x) = x\). This time \(F(x) \neq x^2\) since \(\tfrac{d}{dx} x^2 = 2x \neq x\). But if we divide by \(2\) and let \(F(x) = \tfrac{x^2}{2}\) then by linearity of the derivative,
+</p>
+\begin{align*}
+F'(x) &amp;= \frac{d}{dx} \frac{x^2}{2} = \frac{1}{2} \frac{d}{dx} x^2 \\
+&amp;= \frac{1}{2} 2x = x.
+\end{align*}
+<p>
+Thus \(F' = x\) and the fundamental theorem gives
+</p>
+\begin{align*}
+\int_2^5 x dx &amp;= \int_2^5 F'(x) dx = F|_2^5 \\
+&amp;= \left.\frac{1}{2} x^2\right|_2^5 \\
+&amp;= \frac{5^2}{2} - \frac{2^2}{2} = \frac{21}{2}.
+\end{align*}
+
+</div></div>
+<div class="eg card" id="orgfae2e9e"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Let \(F'(x) = \sin(x)\) for \(x \in [0, \pi]\). Since \(\tfrac{d}{dx} \cos x = - \sin x\), we can take \(F(x) = -\cos x\):
+\[
+F'(x) = \frac{d}{dx} (-\cos x) = - \frac{d}{dx} \cos x = -(-\sin x) = \sin x.
+\]
+</p>
+<p>
+Then
+</p>
+\begin{align*}
+\int_0^{\pi/2} \sin x dx &amp;= -\cos x|_0^{\pi} \\
+&amp;= -\cos(\pi) - (-\cos(0)) \\
+&amp;= -(-1) - (-1) \\
+&amp;= 2.
+\end{align*}
+
+</div></div>
+</div></div>
+
+
+</div><div class="accordion-item" id="outline-container-notes_04_02_integral_ftc-antiderivatives-item"><h1 class="accordion-header" id="outline-container-notes_04_02_integral_ftc-antiderivatives-header"><button aria-controls="outline-container-notes_04_02_integral_ftc-antiderivatives-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-notes_04_02_integral_ftc-antiderivatives-collapse" data-bs-toggle="collapse" id="notes_04_02_integral_ftc-antiderivatives" type="button"><span class="section-number-2">3.</span> Anti-derivatives</button></h1><div aria-labelledby="outline-container-notes_04_02_integral_ftc-antiderivatives-header" class="accordion-collapse collapse" id="outline-container-notes_04_02_integral_ftc-antiderivatives-collapse"><div class="accordion-body p-3 m-0" id="text-notes_04_02_integral_ftc-antiderivatives-body">
+<p>
+In all the examples above, in order to integrate a function \(f(x)\) we needed to write \(F'(x) = f\) and solve for \(F\). In the first example, with \(f(x) = 2x\), we discovered that \(F(x) = x^2\) satisfies \(F' = f\). In other words, we sought a function \(F\) whose derivative was the given function \(f\). You can think of this as being given the answer of a differentiation problem - namely \(f\) - and you need to figure out what the original function was - namely \(F\). This process has a name.
+</p>
+<div class="defn card" id="orgbce4b05"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Given a continuous function \(f\), a function \(F'\) is called an <b>anti-derivative</b> if \(F' = f\).
+</p>
+</div></div>
+<div class="thm card" id="org2f4c335"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Let \(f : [a, b] \to \mathbb{R}\) be a continuous function. Then the function
+\[
+F(x) = \int_a^x f(t) dt
+\]
+is an anti-derivative for \(f\). For any real number \(C\), the function
+\[
+G(x) = F(x) + C = \int_a^x f(t) dt
+\]
+is also an anti-derivative. In fact, every anti-derivative for \(f\) is of this form.
+</p>
+</div></div>
+<p>
+The proof of the theorem uses the mean value theorem for integrals which we haven't covered in this unit. Thus we omit the proof.
+</p>
+<div class="eg card" id="org417c21b"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Let \(f(x) = 2x\). Then \(G(x) = x^2 + 4\) is an anti-derivative for \(f\). We can see this by directly differentiating,
+\[
+G'(x) = \frac{d}{dx}(x^2 + 4) = 2x.
+\]
+</p>
+</div></div>
+<p>
+Since anti-derivatives of \(f\) are all of the form \(\int_a^x f(t) dt + C\), it's common to make the following definition.
+</p>
+<div class="defn card" id="org2ad0a80"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+The <b>indefinite integral</b> of \(f\) is any anti-derivative and is written \(\int f(x) dx\).
+</p>
+</div></div>
+<p>
+The indefinite integral can be thought of as just notation for anti-derivative. It is defined up to adding an arbitrary constant \(C\). The general anti-derivative may then be written as
+\[
+\int f(x) dx + C.
+\]
+</p>
+</div></div>
+
+
+</div><div class="accordion-item" id="outline-container-notes_04_02_integral_ftc-common_integrals-item"><h1 class="accordion-header" id="outline-container-notes_04_02_integral_ftc-common_integrals-header"><button aria-controls="outline-container-notes_04_02_integral_ftc-common_integrals-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-notes_04_02_integral_ftc-common_integrals-collapse" data-bs-toggle="collapse" id="notes_04_02_integral_ftc-common_integrals" type="button"><span class="section-number-2">4.</span> Common Integrals</button></h1><div aria-labelledby="outline-container-notes_04_02_integral_ftc-common_integrals-header" class="accordion-collapse collapse" id="outline-container-notes_04_02_integral_ftc-common_integrals-collapse"><div class="accordion-body p-3 m-0" id="text-notes_04_02_integral_ftc-common_integrals-body">
+<p>
+Working backwards from functions we know how to differentiate we can deduce indefinite integrals.
+</p>
+<div class="eg card" id="orge4df05e"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Since \(\tfrac{d}{dx} \tfrac{x^{n+1}}{n+1} = x^n\):
+\[
+\int x^n dx = \frac{x^{n+1}}{n+1}.
+\]
+</p>
+</div></div>
+<div class="eg card" id="org15d976c"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Since \(\tfrac{d}{dx} (5x^2 + 7x - 3) = 10x + 7\):
+\[
+\int 10x + 7 dx = 5x^2 + 7x - 3.
+\]
+We could also just take
+\[
+\int 10x + 7 dx = 5x^2 + 7x.
+\]
+Notice that both answers just differ by adding the constant \(-3\).
+</p>
+</div></div>
+<div class="eg card" id="orgbe12858"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Since \(\tfrac{d}{dx} (-\cos x) = \sin\):
+\[
+\int \sin x dx = -\cos x.
+\]
+</p>
+</div></div>
+<div class="eg card" id="orge1cdd86"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Since \(\tfrac{d}{dx} \sin x = \cos x\):
+\[
+\int \cos x dx = \sin x.
+\]
+</p>
+</div></div>
+<div class="eg card" id="org5b51bbf"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Since \(\tfrac{d}{dx} e^x = e^x\):
+\[
+\int e^x dx = e^x.
+\]
+</p>
+</div></div>
+</div></div>
+
+
+</div></div>

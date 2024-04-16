@@ -1,0 +1,266 @@
+---
+layout: notes
+title: Notes 04.01 Definite Integral
+---
+
+<div class="accordion"><div class="accordion-item" id="outline-container-notes_04_01_definite_integral-introduction-item"><h1 class="accordion-header" id="outline-container-notes_04_01_definite_integral-introduction-header"><button aria-controls="outline-container-notes_04_01_definite_integral-introduction-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-notes_04_01_definite_integral-introduction-collapse" data-bs-toggle="collapse" id="notes_04_01_definite_integral-introduction" type="button"><span class="section-number-2">1.</span> Introduction</button></h1><div aria-labelledby="outline-container-notes_04_01_definite_integral-introduction-header" class="accordion-collapse collapse" id="outline-container-notes_04_01_definite_integral-introduction-collapse"><div class="accordion-body p-3 m-0" id="text-notes_04_01_definite_integral-introduction-body">
+<p>
+Integration is the continuous analogue of a sum. It computes the area under the graph of a function.
+</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Integral">Wikipedia page on The Integral</a>
+</p>
+</div>
+
+
+<div class="outline-3" id="outline-container-org66975d7">
+<h3 id="org66975d7">Lecture Materials</h3>
+<div class="outline-text-3" id="text-org66975d7">
+<ul class="org-ul">
+<li>These notes: <a href="https://pabryan.github.io/notes/mq_math1010_2024_s2/notes_04_01_definite_integral.pdf">PDF</a></li>
+<li>Slides: <a href="https://pabryan.github.io/slides/mq_math1010_2024_s2/lecture_04_01_definite_integral/">Online</a></li>
+<li>Slides <a href="https://pabryan.github.io/slides/mq_math1010_2024_s2/lecture_04_01_definite_integral.pdf">PDF</a></li>
+</ul>
+</div>
+</div>
+<div class="outline-3" id="outline-container-orgec2e3f1">
+<h3 id="orgec2e3f1">References: <a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)">Calculus OpenStax</a></h3>
+<div class="outline-text-3" id="text-orgec2e3f1">
+<ul class="org-ul">
+<li><a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/05%3A_Integration/5.01%3A_Approximating_Areas">5.1: Approximating Areas</a></li>
+<li><a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/05%3A_Integration/5.02%3A_The_Definite_Integral">5.2: The Definite Integral</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="accordion-item" id="outline-container-notes_04_01_definite_integral-regular_partition-item"><h1 class="accordion-header" id="outline-container-notes_04_01_definite_integral-regular_partition-header"><button aria-controls="outline-container-notes_04_01_definite_integral-regular_partition-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-notes_04_01_definite_integral-regular_partition-collapse" data-bs-toggle="collapse" id="notes_04_01_definite_integral-regular_partition" type="button"><span class="section-number-2">2.</span> Regular Partition</button></h1><div aria-labelledby="outline-container-notes_04_01_definite_integral-regular_partition-header" class="accordion-collapse collapse" id="outline-container-notes_04_01_definite_integral-regular_partition-collapse"><div class="accordion-body p-3 m-0" id="text-notes_04_01_definite_integral-regular_partition-body">
+<div class="defn card" id="orga462619"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Let \([a, b]\) be a closed interval. Given an positive integer \(n\), let \(\Delta x = \frac{b-a}{n}\). The <b>regular partition</b> of \([a, b]\) into \(n\) equally spaces intervals is the set of intevals,
+\[
+I_i = [x_{i-1}, x_i]
+\]
+for \(i = 1, \dots, n\) and where \(x_i = a + i \Delta x\) for \(i = 0, \dots, n\).
+</p>
+</div></div>
+<div class="eg card" id="org0f7bdca"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Let \([a, b] = [2, 5]\) and let \(n = 3\). Then \(\Delta x = \frac{5-2}{3} = 1\). We have
+</p>
+\begin{align*}
+x_0 &amp;= 2 + 0 \times 1 = 2 \\
+x_1 &amp;= 2 + 1 \times 1 = 3 \\
+x_2 &amp;= 2 + 2 \times 1 = 4 \\
+x_3 &amp;= 2 + 3 \times 1 = 5
+\end{align*}
+
+<p>
+The intervals are
+</p>
+\begin{align*}
+I_1 &amp;= [2, 3] \\
+I_2 &amp;= [3, 4] \\
+I_3 &amp;= [4, 5]
+\end{align*}
+
+</div></div>
+<p>
+Notice that the length of each interval is
+\[
+x_i - x_{i-1} = (a + i\Delta x) - (a + (i-1)\Delta x) = \Delta x.
+\]
+</p>
+<div class="eg card" id="orgd282154"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Let \([a, b] = [2, 5]\) and let \(n = 6\). Then \(\Delta x = \frac{5-2}{6} = 1/2\). We have
+</p>
+\begin{align*}
+x_0 &amp;= 2 + 0 \times 1/2 = 2 \\
+x_1 &amp;= 2 + 1 \times 1/2 = 2.5 \\
+x_2 &amp;= 2 + 2 \times 1/2 = 3 \\
+x_3 &amp;= 2 + 3 \times 1/2 = 3.5 \\
+x_4 &amp;= 2 + 1 \times 1/2 = 4 \\
+x_5 &amp;= 2 + 2 \times 1/2 = 4.5 \\
+x_6 &amp;= 2 + 3 \times 1/2 = 5
+\end{align*}
+
+<p>
+The intervals are
+</p>
+\begin{align*}
+I_1 &amp;= [2, 2.5] \\
+I_2 &amp;= [2.5, 3] \\
+I_3 &amp;= [3, 3.5] \\
+I_4 &amp;= [3.5, 4] \\
+I_5 &amp;= [4, 4.5] \\
+I_6 &amp;= [4.5, 5]
+\end{align*}
+
+</div></div>
+</div></div>
+
+
+</div><div class="accordion-item" id="outline-container-notes_04_01_definite_integral-approximating_sum-item"><h1 class="accordion-header" id="outline-container-notes_04_01_definite_integral-approximating_sum-header"><button aria-controls="outline-container-notes_04_01_definite_integral-approximating_sum-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-notes_04_01_definite_integral-approximating_sum-collapse" data-bs-toggle="collapse" id="notes_04_01_definite_integral-approximating_sum" type="button"><span class="section-number-2">3.</span> Approximating Sum</button></h1><div aria-labelledby="outline-container-notes_04_01_definite_integral-approximating_sum-header" class="accordion-collapse collapse" id="outline-container-notes_04_01_definite_integral-approximating_sum-collapse"><div class="accordion-body p-3 m-0" id="text-notes_04_01_definite_integral-approximating_sum-body">
+<div class="defn card" id="org4ca7de5"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Let \(f : [a, b] \to \mathbb{R}\) be a continuous function. Let \(x_0, \cdots, x_n\) be the endpoints of the intervals \(I_i = [x_{i-1}, x_i]\) of the regular partition. Let
+</p>
+\begin{align*}
+m_i &amp;= \min \{f(x) : x \in I_i\} \\
+M_i &amp;= \max \{f(x) : x \in I_i\}.
+\end{align*}
+
+</div></div>
+<div class="eg card" id="org3832d36"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Let \(f : [2, 5] \to \mathbb{R}\) be defined by \(f(x) = x + 4\). Since \(f'(x) = 1 &gt; 0\), \(f\) is increasing. Thus the minimum on \(I_i\) occurs at the left end point
+\[
+m_i = \min\{x + 4 : x_{i-1} \leq x \leq x_i\} = x_{i-1} + 4.
+\]
+</p>
+<p>
+The maximum occurs at the right end point,
+\[
+M_i = \max \{x + 4 : x_{i-1} \leq x \leq x_i\} = x_i + 4.
+\]
+</p>
+<p>
+Now let \(n=3\). From an example above, we obtained \(x_0 = 2\), \(x_1 = 3\), \(x_2 = 4\), and \(x_3 = 5\). Then we have
+</p>
+\begin{align*}
+m_1 &amp;= x_0 + 4 = 6 \\
+m_2 &amp;= x_1 + 4 = 7
+m_3 &amp;= x_2 + 4 = 8
+\end{align*}
+
+<p>
+and
+</p>
+
+\begin{align*}
+M_1 &amp;= x_1 + 4 = 7 \\
+M_2 &amp;= x_2 + 4 = 8
+M_3 &amp;= x_3 + 4 = 9
+\end{align*}
+
+</div></div>
+<div class="defn card" id="orga6a6f8a"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+The minimum sum for \(f\) is
+</p>
+\begin{align*}
+m_f(n) &amp;= m_1 \Delta x + m_2 \Delta x + \dots + m_{n-1} \Delta x + m_n \Delta x \\
+&amp;= (m_1 + \dots + m_n) \Delta x.
+\end{align*}
+
+<p>
+The maximum sum is
+</p>
+\begin{align*}
+M_f(n) &amp;= M_1 \Delta x + M_2 \Delta x + \dots + M_{n-1} \Delta x + M_n \Delta x \\
+&amp;= (M_1 + \dots + M_n) \Delta x.
+\end{align*}
+
+</div></div>
+<p>
+The area under the graph of \(f\) satisfies
+\[
+m_f(n) \leq \text{Area} \leq M_f(n).
+\]
+</p>
+<div class="eg card" id="orgd7568a9"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Let \(f : [2, 5] \to \mathbb{R}\) be defined by \(f(x) = x + 4\) and \(n=3\). Using \(\Delta x = (5-2)/3 = 1\) and the values of \(m_i, M_i\) obtained above,
+</p>
+\begin{align*}
+m_f(3) &amp;= (m_1 + m_2 + m_3) \Delta x \\
+&amp;= (6 + 7 + 8) \times 1\\
+&amp;= 21.
+\end{align*}
+
+<p>
+and
+</p>
+
+\begin{align*}
+M_f(3) &amp;= (M_1 + M_2 + M_3) \Delta x \\
+&amp;= (7 + 8 + 9) \times 1\\
+&amp;= 24.
+\end{align*}
+
+</div></div>
+</div></div>
+
+
+</div><div class="accordion-item" id="outline-container-notes_04_01_definite_integral-definite_integral-item"><h1 class="accordion-header" id="outline-container-notes_04_01_definite_integral-definite_integral-header"><button aria-controls="outline-container-notes_04_01_definite_integral-definite_integral-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-notes_04_01_definite_integral-definite_integral-collapse" data-bs-toggle="collapse" id="notes_04_01_definite_integral-definite_integral" type="button"><span class="section-number-2">4.</span> Definite Integral</button></h1><div aria-labelledby="outline-container-notes_04_01_definite_integral-definite_integral-header" class="accordion-collapse collapse" id="outline-container-notes_04_01_definite_integral-definite_integral-collapse"><div class="accordion-body p-3 m-0" id="text-notes_04_01_definite_integral-definite_integral-body">
+<div class="thm card" id="org79c0111"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Let \(f : [a, b] \to \mathbb{R}\) be a continuous function. Then the following limits exist and are equal,
+\[
+\lim_{n \to \infty} m_f(n) = \lim_{n\to\infty} M_f(n).
+\]
+</p>
+</div></div>
+<div class="defn card" id="orgf290a11"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+The definite integral is
+\[
+\int_a^b f(x) dx = \lim_{n\to\infty} m_f(n) = \lim_{n\to\infty} M_f(n).
+\]
+</p>
+</div></div>
+<p>
+Roughly speaking, the integral of \(f\) is obtained by adding up all the values of \(f\) over shorter and shorter intervals. In the limit, we get the integral, which we think of as sort of sum of the values of \(f\) over the continuously variying values of \(x \in [a, ]\). Sometimes the integral is referred to as a continuous sum.
+</p>
+<p>
+Another interpretation is as the area under the graph of \(f\). We observed above that\[
+m_f(n) \leq \text{Area} \leq M_f(n).
+\]
+Thus by the squeeze theorem,
+\[
+\int_a^b f(x) dx = \text{Area}.
+\]
+</p>
+<div class="eg card" id="org0de615a"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Let \(f(x) = x\) and \([a, b] = [0, 1]\). For any \(n\), \(\Delta n = \tfrac{1-0}{n} = \frac{1}{n}\). Then
+\[
+x_i = 0 + i \Delta x = \frac{i}{n}.
+\]
+</p>
+<p>
+Since \(f\) is increasing, the minimum over \(I_i\) occurs at the left hand endpoint, \(x_{i-1}\) and the maximum occurs at the right hand endpoint, \(x_i\). Therefore
+</p>
+\begin{align*}
+m_i &amp;= f(x_{i-1}) = \frac{i-1}{n} \\
+M_i &amp;= f(x_i) = \frac{i}{n}
+\end{align*}
+
+<p>
+The minimum sum is
+</p>
+\begin{align*}
+m_f(n) &amp;= \Delta x [m_1 + \dots + m_n] \\
+&amp;= \frac{1}{n} \left[\frac{0}{n} + \frac{1}{n} + \dots + \frac{n-1}{n}\right] \\
+&amp;= \frac{1}{n} \frac{0 + 1 + \dots + n-1}{n} \\
+&amp;= \frac{\tfrac{(n-1)(n-2)}{2}}{n^2} \\
+&amp;= \frac{1}{2} - \frac{3}{2n} + \frac{1}{n^2}
+\end{align*}
+
+<p>
+Taking the limit \(n\to\infty\),
+</p>
+\begin{align*}
+\int_0^1 x dx &amp;= \lim_{n\to\infty} m(n) \\
+&amp;= \lim_{n\to\infty} \frac{1}{2} - \frac{3}{2n} + \frac{1}{n^2} \\
+&amp;= \frac{1}{2}.
+\end{align*}
+
+<p>
+The maximum sum is similar.
+</p>
+</div></div>
+</div></div>
+
+
+</div></div>
