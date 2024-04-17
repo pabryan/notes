@@ -85,3 +85,7 @@ h3 {
 .pf h5.card-title::before {
     content: "Proof"
 }
+
+span.section-number-2 {
+    margin-right: 10px;
+}
