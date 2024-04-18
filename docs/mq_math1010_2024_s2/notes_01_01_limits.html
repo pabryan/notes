@@ -1,40 +1,42 @@
 ---
 layout: notes
-title: Notes 01.01 Limits
+lecture: '01'
+name: limits
+title: Limits
+week: '01'
 ---
 
-<div class="accordion"><div class="accordion-item" id="outline-container-orgef58e1c-item"><h1 class="accordion-header" id="outline-container-orgef58e1c-header"><button aria-controls="outline-container-orgef58e1c-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-orgef58e1c-collapse" data-bs-toggle="collapse" id="orgef58e1c" type="button"><span class="section-number-2">1.</span> Introduction</button></h1><div aria-labelledby="outline-container-orgef58e1c-header" class="accordion-collapse collapse" id="outline-container-orgef58e1c-collapse"><div class="accordion-body p-3 m-0" id="text-1-body">
+<div class="accordion"><div class="accordion-item" id="outline-container-introduction-item"><h1 class="accordion-header" id="outline-container-introduction-header"><button aria-controls="outline-container-introduction-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-introduction-collapse" data-bs-toggle="collapse" id="introduction" type="button"><span class="section-number-2">1.</span> Introduction</button></h1><div aria-labelledby="outline-container-introduction-header" class="accordion-collapse collapse" id="outline-container-introduction-collapse"><div class="accordion-body p-3 m-0" id="text-introduction-body">
 <p>
 Limits are a fundamental concept in calculus that form the basis for understanding continuity, differentiation, and integration. A limit is the value that a function approaches as the input approaches a certain value.
 </p>
 <p>
 <a href="https://en.wikipedia.org/wiki/Limit_(mathematics)">Wikipedia Article on Limits</a>
 </p>
-</div>
-
-
-<div class="outline-3" id="outline-container-org98f8835">
-<h3 id="org98f8835">Lecture Materials</h3>
-<div class="outline-text-3" id="text-org98f8835">
+</div><div class="outline-3" id="outline-container-introduction-lecture_materials">
+<h3 id="introduction-lecture_materials">Lecture Materials</h3>
+<div class="outline-text-3" id="text-introduction-lecture_materials">
 <ul class="org-ul">
 <li>These notes: <a href="https://pabryan.github.io/notes/mq_math1010_2024_s2/notes_01_01_limits.pdf">PDF</a></li>
 <li>Slides: <a href="https://pabryan.github.io/slides/mq_math1010_2024_s2/lecture_01_01_limits/">Online</a></li>
 <li>Slides <a href="https://pabryan.github.io/slides/mq_math1010_2024_s2/lecture_01_01_limits.pdf">PDF</a></li>
 </ul>
 </div>
-</div>
-<div class="outline-3" id="outline-container-org5c75cd6">
-<h3 id="org5c75cd6">References: <a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)">Calculus OpenStax</a></h3>
-<div class="outline-text-3" id="text-org5c75cd6">
+</div><div class="outline-3" id="outline-container-introduction-references">
+<h3 id="introduction-references">References: <a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)">Calculus OpenStax</a></h3>
+<div class="outline-text-3" id="text-introduction-references">
 <ul class="org-ul">
 <li><a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/02%3A_Limits/2.02%3A_The_Limit_of_a_Function">2.2: The Limit of a Function</a></li>
 <li><a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/02%3A_Limits/2.03%3A_The_Limit_Laws">2.3: The Limit Laws</a></li>
 </ul>
 </div>
-</div>
-</div>
-</div><div class="accordion-item" id="outline-container-orgc20f231-item"><h1 class="accordion-header" id="outline-container-orgc20f231-header"><button aria-controls="outline-container-orgc20f231-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-orgc20f231-collapse" data-bs-toggle="collapse" id="orgc20f231" type="button"><span class="section-number-2">2.</span> Limits</button></h1><div aria-labelledby="outline-container-orgc20f231-header" class="accordion-collapse collapse" id="outline-container-orgc20f231-collapse"><div class="accordion-body p-3 m-0" id="text-2-body">
-<div class="defn card" id="orge6e6dce"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+</div></div>
+
+
+
+
+</div><div class="accordion-item" id="outline-container-limits-item"><h1 class="accordion-header" id="outline-container-limits-header"><button aria-controls="outline-container-limits-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-limits-collapse" data-bs-toggle="collapse" id="limits" type="button"><span class="section-number-2">2.</span> Limits</button></h1><div aria-labelledby="outline-container-limits-header" class="accordion-collapse collapse" id="outline-container-limits-collapse"><div class="accordion-body p-3 m-0" id="text-limits-body">
+<div class="defn card" id="text-limits-body-defn-0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 If the function values \(f(x)\) approach \(L\) as the values \(x\) approach \(a\), then the limit exists and we write
 \[
@@ -43,7 +45,7 @@ If the function values \(f(x)\) approach \(L\) as the values \(x\) approach \(a\
 <b>Note</b>: Here we let \(x\) approach \(a\) but we consider only \(x \neq a\).
 </p>
 </div></div>
-<div class="thm card" id="org034e000"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="thm card" id="text-limits-body-thm-0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 If the limits \(\lim_{x\to a}f(x)\) and \(\lim_{x\to a} g(x)\) exist, then
 </p>
@@ -53,7 +55,7 @@ If the limits \(\lim_{x\to a}f(x)\) and \(\lim_{x\to a} g(x)\) exist, then
 <dt>Quotient Law</dt><dd>\(\displaystyle \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{\displaystyle\lim_{x\to a} f(x)}{\displaystyle\lim_{x\to a} g(x)}\) provided \(\lim_{x\to a} g(x) \neq 0\)</dd>
 </dl>
 </div></div>
-<div class="eg card" id="org761d8ff"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="text-limits-body-eg-0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Calculate the limit,
 \[
@@ -71,7 +73,7 @@ Using the limit laws,
 \end{align*}
 
 </div></div>
-<div class="eg card" id="org53c0f2f"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="text-limits-body-eg-1"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Calculate the limit,
 \[
@@ -93,7 +95,7 @@ Since the denominator limit is not \(0\) we may apply the quotient law to obtain
 \]
 </p>
 </div></div>
-<div class="eg card" id="orgc71dbd4"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="text-limits-body-eg-2"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Calculate the limit,
 \[
@@ -122,8 +124,8 @@ Now we may apply the limit laws to obtain
 </div></div>
 
 
-</div><div class="accordion-item" id="outline-container-orgeac1e60-item"><h1 class="accordion-header" id="outline-container-orgeac1e60-header"><button aria-controls="outline-container-orgeac1e60-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-orgeac1e60-collapse" data-bs-toggle="collapse" id="orgeac1e60" type="button"><span class="section-number-2">3.</span> One Sided Limits</button></h1><div aria-labelledby="outline-container-orgeac1e60-header" class="accordion-collapse collapse" id="outline-container-orgeac1e60-collapse"><div class="accordion-body p-3 m-0" id="text-3-body">
-<div class="defn card" id="org97da852"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+</div><div class="accordion-item" id="outline-container-one_sided_limits-item"><h1 class="accordion-header" id="outline-container-one_sided_limits-header"><button aria-controls="outline-container-one_sided_limits-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-one_sided_limits-collapse" data-bs-toggle="collapse" id="one_sided_limits" type="button"><span class="section-number-2">3.</span> One Sided Limits</button></h1><div aria-labelledby="outline-container-one_sided_limits-header" class="accordion-collapse collapse" id="outline-container-one_sided_limits-collapse"><div class="accordion-body p-3 m-0" id="text-one_sided_limits-body">
+<div class="defn card" id="text-one_sided_limits-body-defn-1"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 If the function values \(f(x)\) approach \(L\) as the values \(x\) approach \(a\) <b>from the left</b>, then the limit from the left exists and we write
 \[
@@ -138,12 +140,12 @@ The limit from the right is similar, but with \(x &gt; a\); in this case we writ
 \]
 </p>
 </div></div>
-<div class="thm card" id="orga14cddc"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="thm card" id="text-one_sided_limits-body-thm-1"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 The limit \(\lim_{x\to a} f(x) = L\) if and only if \(\lim_{x\to a^-} f(x) = L\) and \(\lim_{x\to a^+} f(x) = L\).
 </p>
 </div></div>
-<div class="eg card" id="org525cb7b"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="text-one_sided_limits-body-eg-3"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Calculate the left and right limits of the function
 \[
@@ -171,8 +173,8 @@ Since \(\lim_{x\to 2^-} f(x) \neq \lim_{x\to 2^+} f(x)\), the limit \(\lim_{x \t
 </div></div>
 
 
-</div><div class="accordion-item" id="outline-container-orgd102fb7-item"><h1 class="accordion-header" id="outline-container-orgd102fb7-header"><button aria-controls="outline-container-orgd102fb7-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-orgd102fb7-collapse" data-bs-toggle="collapse" id="orgd102fb7" type="button"><span class="section-number-2">4.</span> Infinite Limits</button></h1><div aria-labelledby="outline-container-orgd102fb7-header" class="accordion-collapse collapse" id="outline-container-orgd102fb7-collapse"><div class="accordion-body p-3 m-0" id="text-4-body">
-<div class="defn card" id="org50873fb"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+</div><div class="accordion-item" id="outline-container-infinite_limits-item"><h1 class="accordion-header" id="outline-container-infinite_limits-header"><button aria-controls="outline-container-infinite_limits-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-infinite_limits-collapse" data-bs-toggle="collapse" id="infinite_limits" type="button"><span class="section-number-2">4.</span> Infinite Limits</button></h1><div aria-labelledby="outline-container-infinite_limits-header" class="accordion-collapse collapse" id="outline-container-infinite_limits-collapse"><div class="accordion-body p-3 m-0" id="text-infinite_limits-body">
+<div class="defn card" id="text-infinite_limits-body-defn-2"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 If the functions values \(f(x)\) become positive and unbounded as \(x \to a\), then we write
 \[
@@ -189,7 +191,7 @@ If the functions values \(f(x)\) become negative and unbounded as \(x \to a\), t
 Similar definitions apply for \(\lim_{x \to a^{\pm}} f(x)\).
 </p>
 </div></div>
-<div class="eg card" id="org3c87202"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="text-infinite_limits-body-eg-4"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Calculate the limit
 \[
@@ -221,7 +223,7 @@ That is, for any real number \(M &gt; 0\), if \(x\) is close enough to \(0\) (i.
 \]
 </p>
 </div></div>
-<div class="eg card" id="orgd2c44a4"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="text-infinite_limits-body-eg-5"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Calculate the limit
 \[
@@ -256,8 +258,8 @@ In this case, the limit \(\lim_{x\to 1} \tfrac{x+1}{x-1}\) doesn't exist (it doe
 </div></div>
 
 
-</div><div class="accordion-item" id="outline-container-org0437d35-item"><h1 class="accordion-header" id="outline-container-org0437d35-header"><button aria-controls="outline-container-org0437d35-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-org0437d35-collapse" data-bs-toggle="collapse" id="org0437d35" type="button"><span class="section-number-2">5.</span> Squeeze Theorem</button></h1><div aria-labelledby="outline-container-org0437d35-header" class="accordion-collapse collapse" id="outline-container-org0437d35-collapse"><div class="accordion-body p-3 m-0" id="text-5-body">
-<div class="thm card" id="org8512193"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+</div><div class="accordion-item" id="outline-container-squeeze_theorem-item"><h1 class="accordion-header" id="outline-container-squeeze_theorem-header"><button aria-controls="outline-container-squeeze_theorem-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-squeeze_theorem-collapse" data-bs-toggle="collapse" id="squeeze_theorem" type="button"><span class="section-number-2">5.</span> Squeeze Theorem</button></h1><div aria-labelledby="outline-container-squeeze_theorem-header" class="accordion-collapse collapse" id="outline-container-squeeze_theorem-collapse"><div class="accordion-body p-3 m-0" id="text-squeeze_theorem-body">
+<div class="thm card" id="text-squeeze_theorem-body-thm-2"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Suppose that \(f(x) \leq g(x) \leq h(x)\) and that
 \[
@@ -271,7 +273,7 @@ Then
 \]
 </p>
 </div></div>
-<div class="eg card" id="org3df72d7"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="text-squeeze_theorem-body-eg-6"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Evaluate the limit
 </p>
@@ -305,12 +307,12 @@ Therefore by the squeeze theorem
 \]
 </p>
 </div></div>
-<div class="figure" id="orgee868d4">
+<div class="figure" id="text-squeeze_theorem-body-figure-0">
 <p><img alt="TrigInequality.png" src="../img/TrigInequality.png"/>
 </p>
 <p><span class="figure-number">Figure 1: </span>By Traced by User:Stannered - Image:TrigInequality.png, CC BY-SA 3.0, <a href="https://commons.wikimedia.org/w/index.php?curid=1868444">https://commons.wikimedia.org/w/index.php?curid=1868444</a></p>
 </div>
-<div class="eg card" id="org2eb8022"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="text-squeeze_theorem-body-eg-7"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Evaluate the limit
 \[

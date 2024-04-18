@@ -1,40 +1,42 @@
 ---
 layout: notes
-title: Notes 04.01 Definite Integral
+lecture: '01'
+name: definite_integral
+title: Definite Integral
+week: '04'
 ---
 
-<div class="accordion"><div class="accordion-item" id="outline-container-notes_04_01_definite_integral-introduction-item"><h1 class="accordion-header" id="outline-container-notes_04_01_definite_integral-introduction-header"><button aria-controls="outline-container-notes_04_01_definite_integral-introduction-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-notes_04_01_definite_integral-introduction-collapse" data-bs-toggle="collapse" id="notes_04_01_definite_integral-introduction" type="button"><span class="section-number-2">1.</span> Introduction</button></h1><div aria-labelledby="outline-container-notes_04_01_definite_integral-introduction-header" class="accordion-collapse collapse" id="outline-container-notes_04_01_definite_integral-introduction-collapse"><div class="accordion-body p-3 m-0" id="text-notes_04_01_definite_integral-introduction-body">
+<div class="accordion"><div class="accordion-item" id="outline-container-introduction-item"><h1 class="accordion-header" id="outline-container-introduction-header"><button aria-controls="outline-container-introduction-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-introduction-collapse" data-bs-toggle="collapse" id="introduction" type="button"><span class="section-number-2">1.</span> Introduction</button></h1><div aria-labelledby="outline-container-introduction-header" class="accordion-collapse collapse" id="outline-container-introduction-collapse"><div class="accordion-body p-3 m-0" id="text-introduction-body">
 <p>
 Integration is the continuous analogue of a sum. It computes the area under the graph of a function.
 </p>
 <p>
 <a href="https://en.wikipedia.org/wiki/Integral">Wikipedia page on The Integral</a>
 </p>
-</div>
-
-
-<div class="outline-3" id="outline-container-org66975d7">
-<h3 id="org66975d7">Lecture Materials</h3>
-<div class="outline-text-3" id="text-org66975d7">
+</div><div class="outline-3" id="outline-container-introduction-lecture_materials">
+<h3 id="introduction-lecture_materials">Lecture Materials</h3>
+<div class="outline-text-3" id="text-introduction-lecture_materials">
 <ul class="org-ul">
 <li>These notes: <a href="https://pabryan.github.io/notes/mq_math1010_2024_s2/notes_04_01_definite_integral.pdf">PDF</a></li>
 <li>Slides: <a href="https://pabryan.github.io/slides/mq_math1010_2024_s2/lecture_04_01_definite_integral/">Online</a></li>
 <li>Slides <a href="https://pabryan.github.io/slides/mq_math1010_2024_s2/lecture_04_01_definite_integral.pdf">PDF</a></li>
 </ul>
 </div>
-</div>
-<div class="outline-3" id="outline-container-orgec2e3f1">
-<h3 id="orgec2e3f1">References: <a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)">Calculus OpenStax</a></h3>
-<div class="outline-text-3" id="text-orgec2e3f1">
+</div><div class="outline-3" id="outline-container-introduction-references">
+<h3 id="introduction-references">References: <a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)">Calculus OpenStax</a></h3>
+<div class="outline-text-3" id="text-introduction-references">
 <ul class="org-ul">
 <li><a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/05%3A_Integration/5.01%3A_Approximating_Areas">5.1: Approximating Areas</a></li>
 <li><a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/05%3A_Integration/5.02%3A_The_Definite_Integral">5.2: The Definite Integral</a></li>
 </ul>
 </div>
-</div>
-</div>
-</div><div class="accordion-item" id="outline-container-notes_04_01_definite_integral-regular_partition-item"><h1 class="accordion-header" id="outline-container-notes_04_01_definite_integral-regular_partition-header"><button aria-controls="outline-container-notes_04_01_definite_integral-regular_partition-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-notes_04_01_definite_integral-regular_partition-collapse" data-bs-toggle="collapse" id="notes_04_01_definite_integral-regular_partition" type="button"><span class="section-number-2">2.</span> Regular Partition</button></h1><div aria-labelledby="outline-container-notes_04_01_definite_integral-regular_partition-header" class="accordion-collapse collapse" id="outline-container-notes_04_01_definite_integral-regular_partition-collapse"><div class="accordion-body p-3 m-0" id="text-notes_04_01_definite_integral-regular_partition-body">
-<div class="defn card" id="orga462619"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+</div></div>
+
+
+
+
+</div><div class="accordion-item" id="outline-container-regular_partition-item"><h1 class="accordion-header" id="outline-container-regular_partition-header"><button aria-controls="outline-container-regular_partition-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-regular_partition-collapse" data-bs-toggle="collapse" id="regular_partition" type="button"><span class="section-number-2">2.</span> Regular Partition</button></h1><div aria-labelledby="outline-container-regular_partition-header" class="accordion-collapse collapse" id="outline-container-regular_partition-collapse"><div class="accordion-body p-3 m-0" id="text-regular_partition-body">
+<div class="defn card" id="text-regular_partition-body-defn-0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Let \([a, b]\) be a closed interval. Given an positive integer \(n\), let \(\Delta x = \frac{b-a}{n}\). The <b>regular partition</b> of \([a, b]\) into \(n\) equally spaces intervals is the set of intevals,
 \[
@@ -43,7 +45,7 @@ I_i = [x_{i-1}, x_i]
 for \(i = 1, \dots, n\) and where \(x_i = a + i \Delta x\) for \(i = 0, \dots, n\).
 </p>
 </div></div>
-<div class="eg card" id="org0f7bdca"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="text-regular_partition-body-eg-0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Let \([a, b] = [2, 5]\) and let \(n = 3\). Then \(\Delta x = \frac{5-2}{3} = 1\). We have
 </p>
@@ -70,7 +72,7 @@ Notice that the length of each interval is
 x_i - x_{i-1} = (a + i\Delta x) - (a + (i-1)\Delta x) = \Delta x.
 \]
 </p>
-<div class="eg card" id="orgd282154"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="text-regular_partition-body-eg-1"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Let \([a, b] = [2, 5]\) and let \(n = 6\). Then \(\Delta x = \frac{5-2}{6} = 1/2\). We have
 </p>
@@ -100,8 +102,8 @@ I_6 &amp;= [4.5, 5]
 </div></div>
 
 
-</div><div class="accordion-item" id="outline-container-notes_04_01_definite_integral-approximating_sum-item"><h1 class="accordion-header" id="outline-container-notes_04_01_definite_integral-approximating_sum-header"><button aria-controls="outline-container-notes_04_01_definite_integral-approximating_sum-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-notes_04_01_definite_integral-approximating_sum-collapse" data-bs-toggle="collapse" id="notes_04_01_definite_integral-approximating_sum" type="button"><span class="section-number-2">3.</span> Approximating Sum</button></h1><div aria-labelledby="outline-container-notes_04_01_definite_integral-approximating_sum-header" class="accordion-collapse collapse" id="outline-container-notes_04_01_definite_integral-approximating_sum-collapse"><div class="accordion-body p-3 m-0" id="text-notes_04_01_definite_integral-approximating_sum-body">
-<div class="defn card" id="org4ca7de5"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+</div><div class="accordion-item" id="outline-container-approximating_sum-item"><h1 class="accordion-header" id="outline-container-approximating_sum-header"><button aria-controls="outline-container-approximating_sum-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-approximating_sum-collapse" data-bs-toggle="collapse" id="approximating_sum" type="button"><span class="section-number-2">3.</span> Approximating Sum</button></h1><div aria-labelledby="outline-container-approximating_sum-header" class="accordion-collapse collapse" id="outline-container-approximating_sum-collapse"><div class="accordion-body p-3 m-0" id="text-approximating_sum-body">
+<div class="defn card" id="text-approximating_sum-body-defn-1"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Let \(f : [a, b] \to \mathbb{R}\) be a continuous function. Let \(x_0, \cdots, x_n\) be the endpoints of the intervals \(I_i = [x_{i-1}, x_i]\) of the regular partition. Let
 </p>
@@ -111,7 +113,7 @@ M_i &amp;= \max \{f(x) : x \in I_i\}.
 \end{align*}
 
 </div></div>
-<div class="eg card" id="org3832d36"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="text-approximating_sum-body-eg-2"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Let \(f : [2, 5] \to \mathbb{R}\) be defined by \(f(x) = x + 4\). Since \(f'(x) = 1 &gt; 0\), \(f\) is increasing. Thus the minimum on \(I_i\) occurs at the left end point
 \[
@@ -144,7 +146,7 @@ M_3 &amp;= x_3 + 4 = 9
 \end{align*}
 
 </div></div>
-<div class="defn card" id="orga6a6f8a"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="defn card" id="text-approximating_sum-body-defn-2"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 The minimum sum for \(f\) is
 </p>
@@ -168,7 +170,7 @@ The area under the graph of \(f\) satisfies
 m_f(n) \leq \text{Area} \leq M_f(n).
 \]
 </p>
-<div class="eg card" id="orgd7568a9"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="text-approximating_sum-body-eg-3"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Let \(f : [2, 5] \to \mathbb{R}\) be defined by \(f(x) = x + 4\) and \(n=3\). Using \(\Delta x = (5-2)/3 = 1\) and the values of \(m_i, M_i\) obtained above,
 </p>
@@ -192,8 +194,8 @@ M_f(3) &amp;= (M_1 + M_2 + M_3) \Delta x \\
 </div></div>
 
 
-</div><div class="accordion-item" id="outline-container-notes_04_01_definite_integral-definite_integral-item"><h1 class="accordion-header" id="outline-container-notes_04_01_definite_integral-definite_integral-header"><button aria-controls="outline-container-notes_04_01_definite_integral-definite_integral-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-notes_04_01_definite_integral-definite_integral-collapse" data-bs-toggle="collapse" id="notes_04_01_definite_integral-definite_integral" type="button"><span class="section-number-2">4.</span> Definite Integral</button></h1><div aria-labelledby="outline-container-notes_04_01_definite_integral-definite_integral-header" class="accordion-collapse collapse" id="outline-container-notes_04_01_definite_integral-definite_integral-collapse"><div class="accordion-body p-3 m-0" id="text-notes_04_01_definite_integral-definite_integral-body">
-<div class="thm card" id="org79c0111"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+</div><div class="accordion-item" id="outline-container-definite_integral-item"><h1 class="accordion-header" id="outline-container-definite_integral-header"><button aria-controls="outline-container-definite_integral-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-definite_integral-collapse" data-bs-toggle="collapse" id="definite_integral" type="button"><span class="section-number-2">4.</span> Definite Integral</button></h1><div aria-labelledby="outline-container-definite_integral-header" class="accordion-collapse collapse" id="outline-container-definite_integral-collapse"><div class="accordion-body p-3 m-0" id="text-definite_integral-body">
+<div class="thm card" id="text-definite_integral-body-thm-0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Let \(f : [a, b] \to \mathbb{R}\) be a continuous function. Then the following limits exist and are equal,
 \[
@@ -201,7 +203,7 @@ Let \(f : [a, b] \to \mathbb{R}\) be a continuous function. Then the following l
 \]
 </p>
 </div></div>
-<div class="defn card" id="orgf290a11"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="defn card" id="text-definite_integral-body-defn-3"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 The definite integral is
 \[
@@ -221,7 +223,7 @@ Thus by the squeeze theorem,
 \int_a^b f(x) dx = \text{Area}.
 \]
 </p>
-<div class="eg card" id="org0de615a"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="text-definite_integral-body-eg-4"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Let \(f(x) = x\) and \([a, b] = [0, 1]\). For any \(n\), \(\Delta n = \tfrac{1-0}{n} = \frac{1}{n}\). Then
 \[

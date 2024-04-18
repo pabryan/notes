@@ -1,9 +1,12 @@
 ---
 layout: notes
-title: Notes 03.01 Chain Rule
+lecture: '01'
+name: chain_rule
+title: Chain Rule
+week: '03'
 ---
 
-<div class="accordion"><div class="accordion-item" id="outline-container-org8148c21-item"><h1 class="accordion-header" id="outline-container-org8148c21-header"><button aria-controls="outline-container-org8148c21-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-org8148c21-collapse" data-bs-toggle="collapse" id="org8148c21" type="button"><span class="section-number-2">1.</span> Introduction</button></h1><div aria-labelledby="outline-container-org8148c21-header" class="accordion-collapse collapse" id="outline-container-org8148c21-collapse"><div class="accordion-body p-3 m-0" id="text-1-body">
+<div class="accordion"><div class="accordion-item" id="outline-container-introduction-item"><h1 class="accordion-header" id="outline-container-introduction-header"><button aria-controls="outline-container-introduction-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-introduction-collapse" data-bs-toggle="collapse" id="introduction" type="button"><span class="section-number-2">1.</span> Introduction</button></h1><div aria-labelledby="outline-container-introduction-header" class="accordion-collapse collapse" id="outline-container-introduction-collapse"><div class="accordion-body p-3 m-0" id="text-introduction-body">
 <p>
 The chain rule provides a way to calculate the derivative of a composition of functions. For example, if a balloon is being filled with air, we may compute the rate of change of the volume \(\tfrac{dV}{dt}\) from the rate of change of the radius \(\tfrac{dr}{dt}\), and the rate of change of the volume with respect to the radius \(\tfrac{dV}{dr}\). This may be succinctly expressed as
 \[
@@ -13,31 +16,30 @@ The chain rule provides a way to calculate the derivative of a composition of fu
 <p>
 <a href="https://en.wikipedia.org/wiki/Chain_rule">Wikipedia article on the chain rule</a>
 </p>
-</div>
-
-
-<div class="outline-3" id="outline-container-orgbf574b6">
-<h3 id="orgbf574b6">Lecture Materials</h3>
-<div class="outline-text-3" id="text-orgbf574b6">
+</div><div class="outline-3" id="outline-container-introduction-lecture_materials">
+<h3 id="introduction-lecture_materials">Lecture Materials</h3>
+<div class="outline-text-3" id="text-introduction-lecture_materials">
 <ul class="org-ul">
 <li>These notes: <a href="https://pabryan.github.io/notes/mq_math1010_2024_s2/notes_03_01_chain_rule.pdf">PDF</a></li>
 <li>Slides: <a href="https://pabryan.github.io/slides/mq_math1010_2024_s2/lecture_03_01_chain_rule/">Online</a></li>
 <li>Slides <a href="https://pabryan.github.io/slides/mq_math1010_2024_s2/lecture_03_01_chain_rule.pdf">PDF</a></li>
 </ul>
 </div>
-</div>
-<div class="outline-3" id="outline-container-org2acf6f9">
-<h3 id="org2acf6f9">References: <a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)">Calculus OpenStax</a></h3>
-<div class="outline-text-3" id="text-org2acf6f9">
+</div><div class="outline-3" id="outline-container-introduction-references">
+<h3 id="introduction-references">References: <a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)">Calculus OpenStax</a></h3>
+<div class="outline-text-3" id="text-introduction-references">
 <ul class="org-ul">
 <li><a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/03%3A_Derivatives/3.06%3A_The_Chain_Rule">3.6: Chain Rule</a></li>
 <li><a href="https://math.libretexts.org/Bookshelves/Calculus/Calculus_(OpenStax)/03%3A_Derivatives/3.07%3A_Derivatives_of_Inverse_Functions">3.7: Derivatives of Inverse Functions</a></li>
 </ul>
 </div>
-</div>
-</div>
-</div><div class="accordion-item" id="outline-container-org2276ffd-item"><h1 class="accordion-header" id="outline-container-org2276ffd-header"><button aria-controls="outline-container-org2276ffd-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-org2276ffd-collapse" data-bs-toggle="collapse" id="org2276ffd" type="button"><span class="section-number-2">2.</span> The Chain Rule</button></h1><div aria-labelledby="outline-container-org2276ffd-header" class="accordion-collapse collapse" id="outline-container-org2276ffd-collapse"><div class="accordion-body p-3 m-0" id="text-2-body">
-<div class="thm card" id="orge954895"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+</div></div>
+
+
+
+
+</div><div class="accordion-item" id="outline-container-the_chain_rule-item"><h1 class="accordion-header" id="outline-container-the_chain_rule-header"><button aria-controls="outline-container-the_chain_rule-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-the_chain_rule-collapse" data-bs-toggle="collapse" id="the_chain_rule" type="button"><span class="section-number-2">2.</span> The Chain Rule</button></h1><div aria-labelledby="outline-container-the_chain_rule-header" class="accordion-collapse collapse" id="outline-container-the_chain_rule-collapse"><div class="accordion-body p-3 m-0" id="text-the_chain_rule-body">
+<div class="thm card" id="text-the_chain_rule-body-thm-0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Let \(f, g\) be differentiable functions. Then for points where \(f \circ g\) is defined we have
 \[
@@ -51,7 +53,7 @@ In \(\tfrac{d}{dx}\) notation if \(y = g(x)\) and \(z = f(y)\),
 \]
 </p>
 </div></div>
-<div class="eg card" id="orgc930e17"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="text-the_chain_rule-body-eg-0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Calculate the derivative of \(\sin(x^2)\).
 </p>
@@ -75,7 +77,7 @@ Differentiating \(f\)and \(g\) gives \(f'(y) = \cos(y)\) and \(g'(x) = 2x\). The
 \end{align*}
 
 </div></div>
-<div class="eg card" id="orgb03dd0c"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="text-the_chain_rule-body-eg-1"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Calculate the derivative of
 \[
@@ -99,7 +101,7 @@ We have \(f'(y) = 2y\) and by the quotient rule, \(g'(x) = \frac{1}{(x+1)^2}\). 
 \end{align*}
 
 </div></div>
-<div class="pf card" id="org245539c"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="pf card" id="text-the_chain_rule-body-pf-0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 <b>Proof of the Chain Rule</b>
 </p>
@@ -164,8 +166,8 @@ is close \(f(g(x)) g'(x)\). But \(g'(x) = 0\) hence \(f'(g(x) g'(x) = 0\). Thus 
 </div></div>
 
 
-</div><div class="accordion-item" id="outline-container-orga37cd0d-item"><h1 class="accordion-header" id="outline-container-orga37cd0d-header"><button aria-controls="outline-container-orga37cd0d-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-orga37cd0d-collapse" data-bs-toggle="collapse" id="orga37cd0d" type="button"><span class="section-number-2">3.</span> Differentiating Inverse Functions</button></h1><div aria-labelledby="outline-container-orga37cd0d-header" class="accordion-collapse collapse" id="outline-container-orga37cd0d-collapse"><div class="accordion-body p-3 m-0" id="text-3-body">
-<div class="thm card" id="org9e42290"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+</div><div class="accordion-item" id="outline-container-inverse_functions-item"><h1 class="accordion-header" id="outline-container-inverse_functions-header"><button aria-controls="outline-container-inverse_functions-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-inverse_functions-collapse" data-bs-toggle="collapse" id="inverse_functions" type="button"><span class="section-number-2">3.</span> Differentiating Inverse Functions</button></h1><div aria-labelledby="outline-container-inverse_functions-header" class="accordion-collapse collapse" id="outline-container-inverse_functions-collapse"><div class="accordion-body p-3 m-0" id="text-inverse_functions-body">
+<div class="thm card" id="text-inverse_functions-body-thm-1"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Let \(f\) be a differentiable function that is also invertible. Then the inverse function is also differentiable with derivative
 \[
@@ -180,7 +182,7 @@ In \(\tfrac{d}{dx}\) notation,
 \]
 </p>
 </div></div>
-<div class="eg card" id="orgcaae9b4"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="text-inverse_functions-body-eg-2"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Let \(g(y) = \sqrt{y}\) for \(y &gt; 0\).
 </p>
@@ -194,7 +196,7 @@ g'(y) &amp;= \frac{1}{f'(x)} \\
 \end{align*}
 
 </div></div>
-<div class="eg card" id="org5002be6"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="eg card" id="text-inverse_functions-body-eg-3"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 Calculate the derivative of \(g(y) = \ln y\) for \(y &gt; 0\).
 </p>
@@ -211,7 +213,7 @@ g'(y) &amp;= \frac{1}{f'(x)} \\
 where in the last line we use the fact that \(\ln y\) is the inverse of \(e^x\) hence \(e^{\ln y} = y\).
 </p>
 </div></div>
-<div class="pf card" id="org4e71c25"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<div class="pf card" id="text-inverse_functions-body-pf-1"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 <b>Proof of Differentiating Inverses</b>
 </p>
