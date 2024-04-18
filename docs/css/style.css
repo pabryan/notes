@@ -11,7 +11,7 @@ ul li {
   border: 1px solid white; /* Add a thin border to each list item */
   margin-top: -1px; /* Prevent double borders */
   background-color: #121212; /* Add a grey background color */
-  padding: 12px; /* Add some padding */
+  padding: 10px 10px 10px 40px; /* Add some padding */
 }
 
 h3 {
