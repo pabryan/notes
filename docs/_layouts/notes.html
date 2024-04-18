@@ -22,7 +22,7 @@
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
-    <title>{{ title }}</title>
+    <title>Lesson {{ note.week }}.{{ note.lecture }} : {{ note.title }}</title>
   </head>
 
   <body>
@@ -34,7 +34,7 @@
 	<div class="col-md-12 col-lg-10">
 	  <div class="container py-5 px-1" style="max-width: 800px;">
 
-	    <h3> {{ title }}</h3>
+	    <h3>Lesson {{ page.week }}.{{ page.lecture }} : {{ page.title }}</h3>
 	    
 	    {{ content }}
 
