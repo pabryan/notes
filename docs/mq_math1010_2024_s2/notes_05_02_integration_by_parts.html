@@ -34,7 +34,240 @@ Integration by parts uses the Fundamental Theorem of Calculus to reverse the  pr
 
 
 
-</div><div class="accordion-item" id="outline-container-&lt;topic&gt;-item"><h1 class="accordion-header" id="outline-container-&lt;topic&gt;-header"><button aria-controls="outline-container-&lt;topic&gt;-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-&lt;topic&gt;-collapse" data-bs-toggle="collapse" id="&lt;topic&gt;" type="button"><span class="section-number-2">2.</span> Topic</button></h1><div aria-labelledby="outline-container-&lt;topic&gt;-header" class="accordion-collapse collapse" id="outline-container-&lt;topic&gt;-collapse"><div class="accordion-body p-3 m-0" id="text-&lt;topic&gt;-body">
+</div><div class="accordion-item" id="outline-container-reverse_product_rule-item"><h1 class="accordion-header" id="outline-container-reverse_product_rule-header"><button aria-controls="outline-container-reverse_product_rule-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-reverse_product_rule-collapse" data-bs-toggle="collapse" id="reverse_product_rule" type="button"><span class="section-number-2">2.</span> Reversing the Product Rule</button></h1><div aria-labelledby="outline-container-reverse_product_rule-header" class="accordion-collapse collapse" id="outline-container-reverse_product_rule-collapse"><div class="accordion-body p-3 m-0" id="text-reverse_product_rule-body">
+<div class="eg card" id="text-reverse_product_rule-body-eg-0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+By the product rule,
+\[
+\left(xe^x\right)' = e^x + x e^x.
+\]
+</p>
+<p>
+Therefore by the fundamental theorem of calculus,
+</p>
+\begin{align*}
+\int e^x + x e^x dx &amp;= \int \left(xe^x\right)' dx \\
+&amp;= xe^x + C.
+\end{align*}
+
+<p>
+By linearity we also have that
+\[
+\int e^x + xe^x dx = \int e^x dx + \int x e^x dx = e^x + \int xe^x dx.
+\]
+</p>
+<p>
+Putting these two equations together we get
+\[
+e^x + \int x e^x dx = x e^x + C.
+\]
+</p>
+<p>
+Solving for \(\int x e^x dx\) then gives
+\[
+\int x e^x dx = x e^x - e^x + C.
+\]
+</p>
+<p>
+Let's check this is correct by differentiating using the product rule:
+\[
+\frac{d}{dx} \left(x e^x - e^x + C\right) = e^x + x e^x - e^x = x e^x.
+\]
+</p>
+</div></div>
+<div class="thm card" id="text-reverse_product_rule-body-thm-0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+\[
+\int fg' dx = fg - \int f' g dx
+\]
+</p>
+</div></div>
+<div class="pf card" id="text-reverse_product_rule-body-pf-0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+By the product rule,
+\[
+(fg)' = f'g + fg'.
+\]
+</p>
+<p>
+Therefore
+\[
+fg' = (fg)' - f' g.
+\]
+</p>
+<p>
+Integrating and using the Fundamental Theorem of Calculus gives
+\[
+\int fg' dx = \int (fg)' - f'g dx = fg - \int f' g dx.
+\]
+</p>
+</div></div>
+</div></div>
+
+
+</div><div class="accordion-item" id="outline-container-integration_by_parts-item"><h1 class="accordion-header" id="outline-container-integration_by_parts-header"><button aria-controls="outline-container-integration_by_parts-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-integration_by_parts-collapse" data-bs-toggle="collapse" id="integration_by_parts" type="button"><span class="section-number-2">3.</span> Integration by Parts</button></h1><div aria-labelledby="outline-container-integration_by_parts-header" class="accordion-collapse collapse" id="outline-container-integration_by_parts-collapse"><div class="accordion-body p-3 m-0" id="text-integration_by_parts-body">
+<p>
+Let's put everything together into a rule we can apply. For a function \(u(x)\) let us write
+\[
+du = u' dx.
+\]
+</p>
+<div class="thm card" id="text-integration_by_parts-body-thm-1"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+\[
+\int u dv = uv - \int v du
+\]
+</p>
+</div></div>
+<div class="pf card" id="text-integration_by_parts-body-pf-1"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+From the product rule and the Fundamental Theorem of Calculus,
+</p>
+\begin{align*}
+\int u dv &amp;= \int u v' dx \\
+&amp;= \int (uv)' - u' v dx \\
+&amp;= uv - \int v u' dx \\
+&amp;= uv - \int v du.
+\end{align*}
+
+</div></div>
+<div class="eg card" id="text-integration_by_parts-body-eg-1"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Calculate the integral
+\[
+\int x e^x dx
+\]
+</p>
+<p>
+Let \(u = x\) and \(dv = e^x dx\). Then \(du = dx\) and
+\[
+v = \int dv = \int e^x dx = e^x.
+\]
+</p>
+<p>
+Thus by the theorem,
+</p>
+\begin{align*}
+\int x e^x dx &amp;= \int u dv = uv - \int v du \\
+&amp;= x e^x - \int e^x dx \\
+&amp;= x e^x - e^x + C
+\end{align*}
+<p>
+agreeing with what we've already obtained above.
+</p>
+</div></div>
+<div class="eg card" id="text-integration_by_parts-body-eg-2"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Calculate the integral
+\[
+\int \frac{\ln x}{x^3}  dx.
+\]
+</p>
+<p>
+Let \(u = \ln x\) and \(dv = \frac{1}{x^3} dx\). Then \(du = \frac{1}{x}\) and using the rule \(\int x^n dx = \tfrac{x^{n+1}}{n+1}\) with \(n=-3\) we get
+\[
+v = \int dv = \int x^{-3} dx = \frac{x^{-2}}{-2} = -\frac{1}{2x^2}.
+\]
+</p>
+<p>
+Thus by the theorem,
+</p>
+\begin{align*}
+\int \frac{\ln x}{x^x} dx &amp;= \int u dv = uv - \int v du \\
+&amp;= -\frac{\ln x}{2x^2} - \int \left(-\frac{1}{2x^2}\right) \frac{1}{x} dx \\
+&amp;= -\frac{\ln x}{2x^2} + \int \frac{1}{2x^3} dx \\
+&amp;= -\frac{\ln x}{2x^2} - \frac{1}{4x^2} + C.
+\end{align*}
+
+<p>
+Let's check this by differentiating:
+</p>
+\begin{align*}
+\frac{d}{dx} \left(-\frac{\ln x}{2x^2} - \frac{1}{4x^2}\right) &amp;= -\frac{1/x}{2x^2} + \frac{\ln x}{x^3} + \frac{1}{2 x^2} \\
+&amp;= \frac{\ln x}{x^3}.
+\end{align*}
+
+</div></div>
+</div></div>
+
+
+</div><div class="accordion-item" id="outline-container-liate-item"><h1 class="accordion-header" id="outline-container-liate-header"><button aria-controls="outline-container-liate-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-liate-collapse" data-bs-toggle="collapse" id="liate" type="button"><span class="section-number-2">4.</span> LIATE Rule for Integration</button></h1><div aria-labelledby="outline-container-liate-header" class="accordion-collapse collapse" id="outline-container-liate-collapse"><div class="accordion-body p-3 m-0" id="text-liate-body">
+<p>
+When integrating by parts, we must choose which part of the integrand is \(u\) and which part is \(dv\). There is a bit of an art to it, but there are also some helpful guidelines.
+</p>
+<p>
+The following gives a list of precedence for which function should be \(u\).
+</p>
+<ul class="org-ul">
+<li><b>I</b>​nverse trig: \(\arcsin, \arccos\) etc.</li>
+<li><b>L</b>​ogarithmic \(\ln x\), \(\log_2 x\)</li>
+<li><b>A</b>​lgebraic \(x^2, \sqrt{x}\) etc.</li>
+<li><b>T</b>​rigonometric \(\sin, \cos\) etc.</li>
+<li><b>E</b>​xponential \(e^x, 2^x\) etc.</li>
+</ul>
+<p>
+If there is an inverse trig function, that should be \(u\). If not, then if there is a logarithm, it should \(u\). If not, \(u\) should be an algebraic expression and so on.
+</p>
+<div class="eg card" id="text-liate-body-eg-3"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Calculate the integral
+\[
+\int x \ln x dx
+\]
+</p>
+<p>
+The integrand is a product of the <b>A</b>​lgebraic expression \(x\) and the <b>L</b>​ograithm \(\ln x\) . Applying the ILATE rule, we set \(u = \ln x\) and \(dv = x dx\). Then \(du = \tfrac{1}{x} dx\) and \(v = \tfrac{x^2}{2}\). Integrating by parts we get
+</p>
+\begin{align*}
+\int x \ln x dx &amp;= \int u dv = uv - \int v du \\
+&amp;= \frac{x^2\ln x}{2} - \int \tfrac{x^2}{2} \frac{1}{x} dx \\
+&amp;= \frac{x^2\ln x}{2} - \int \tfrac{x}{2} dx \\
+&amp;= \frac{x^2 \ln x}{2} - \frac{x^2}{4} + C.
+\end{align*}
+
+<p>
+Checking our answer by differentiating,
+</p>
+\begin{align*}
+\frac{d}{dx} \left(\frac{x^2 \ln x}{2} - \frac{x^2}{4} + C\right) &amp;= x \ln x + \frac{x}{2} - \frac{x}{2} \\
+&amp;= x \ln x.
+\end{align*}
+
+</div></div>
+<div class="eg card" id="text-liate-body-eg-4"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Calculate the integral
+\[
+\int \arcsin (x) dx
+\]
+</p>
+<p>
+There is only one function there so it seems like we can't integrate by parts. In fact we can! Following ILATE we have an <b>I</b>​nverse trig function so we let \(u = \arcsin x\). But then what is \(dv\)? It's just \(dv = dx\)! Thus we have \(du = \tfrac{1}{\sqrt{1-x^2}}dx\) and \(v = x\). Integrating by parts we get
+</p>
+\begin{align*}
+\int \arcsin(x) dx &amp;= \int u dx = uv - \int v du \\
+&amp;= x \arcsin(x) - \int \frac{x}{\sqrt{1-x^2}} dx
+\end{align*}
+
+<p>
+Making the substitution \(y = 1-x^2\) in the last integral gives \(dy = -2 x dx\). Thus
+</p>
+\begin{align*}
+\int \arcsin(x) &amp;= x \arcsin (x) + \frac{1}{2} \int \frac{1}{\sqrt{y}} dy \\
+&amp;= x \arcsin(x) + \sqrt{y} \\
+&amp;= x \arcsin(x) + \sqrt{1-x^2} + C.
+\end{align*}
+
+<p>
+Checking our answer by differentiation:
+</p>
+\begin{align*}
+\frac{d}{dx} \left(x\arcsin(x) + \sqrt{1-x^2} + C\right) &amp;= \arcsin(x) + \frac{x}{\sqrt{1-x^2}} + \frac{1}{2\sqrt{1-x^2}} \times (-2x) \\
+&amp;= \arcsin(x) + \frac{x}{\sqrt{1-x^2}} - \frac{x}{\sqrt{1-x^2}} \\
+&amp;= \arcsin(x).
+\end{align*}
+
+</div></div>
 </div></div>
 
 
