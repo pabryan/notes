@@ -213,6 +213,32 @@ g'(y) &amp;= \frac{1}{f'(x)} \\
 where in the last line we use the fact that \(\ln y\) is the inverse of \(e^x\) hence \(e^{\ln y} = y\).
 </p>
 </div></div>
+<div class="eg card" id="text-inverse_functions-body-eg-4"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Calculate the derivative of \(g(y) = \arcsin(y)\) for \(y \in (-1, 1)\).
+</p>
+<p>
+This time \(g = f^{-1}\) where \(f(x) = \sin(x)\). Since \(f'(x) = \cos(x)\) and \(x = \arcsin(y)\) we obtain
+\[
+g'(y) = \frac{1}{\cos(x)} = \frac{1}{\cos(\arcsin(y))}
+\]
+</p>
+<p>
+This answer is perfectly correct, but we can simplify the expression to obtain a nice formula. For this we use Pythagoras' theorem in the form \((\sin(x))^2 + (\cos(x))^2 = 1\). Noting that \(\sin(x)\) is invertible for \(x \in (-\pi/2,\pi/2)\) and that on this range of \(x\), \(\cos (x) \geq 0\) we get
+\[
+\cos(x) = \sqrt{1 - (\sin(x))^2}.
+\]
+</p>
+<p>
+Then
+</p>
+\begin{align*}
+g'(y) &amp;= \frac{1}{\cos(\arcsin(y))} \\
+&amp;= \frac{1}{\sqrt{1 - [\sin(\arcsin(y))]^2}} \\
+&amp;= \frac{1}{\sqrt{1-y^2}}.
+\end{align*}
+
+</div></div>
 <div class="pf card" id="text-inverse_functions-body-pf-1"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
 <b>Proof of Differentiating Inverses</b>

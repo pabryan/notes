@@ -83,7 +83,7 @@ Let \(f, g\) be functions and \(F\) and anti-derivative for \(f\). Then
 </div></div>
 <div class="pf card" id="text-reverse_chain_rule-body-pf-1"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
-This is essentially just a restatement of the lemma. The lemma shows that \(F(g(x))\) is an anti-derivative for \(f(g(x)) g'(x)\), hence by the Fundamental Theorem of Calculus, the indefinite integral of \(f(g(x)) g'(x)\) is \(F(g(x)) + C\).
+This is essentially just a restatement of the lemma. The lemma shows that \(F(g(x))\) is an anti-derivative for \(f(g(x)) g'(x)\), hence by the Fundamental Theorem of Calculus, the indefinite integral \(\int f(g(x)) g'(x) dx = F(g(x)) + C\).
 </p>
 </div></div>
 <div class="eg card" id="text-reverse_chain_rule-body-eg-2"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
@@ -94,7 +94,7 @@ Calculate
 \]
 </p>
 <p>
-Let \(f(u) = u^2\) and \(g(x) = x-4\). The substituting \(u = g(x) = x-4\) and using \(g'(x) = 1\), we get
+Let \(f(u) = u^2\) and \(g(x) = x-4\). Then substituting \(u = g(x) = x-4\) and using \(g'(x) = 1\), we get
 \[
 f(g(x)) g'(x) = (x-4)^2
 \]
@@ -123,18 +123,26 @@ Calculate
 \[
 \int x \sqrt{x^2 - 5} dx
 \]
+</p>
+<p>
 Here we try \(f(u) = \sqrt{u} = u^{1/2}\) and \(g(x) = x^2 - 5\) so that \(g'(x) = 2x\). This almost works, but
 \[
 f(g(x)) g'(x) = 2x \sqrt{x^2 - 5}.
 \]
+</p>
+<p>
 It's off by a factor of \(2\). We can fix this easily by changing \(f\) to
 \[
 f(u) = \frac{\sqrt{u}}{2}.
 \]
+</p>
+<p>
 Then
 \[
 f(g(x)) g'(x) = 2x \frac{\sqrt{x^2 - 5}}{2} = x \sqrt{x^2 - 5}
 \]
+</p>
+<p>
 An antiderivative for \(f\) is \(F(u) = \tfrac{1}{3} u^{3/2}\) (check that \(F' = \tfrac{\sqrt{u}}{2}\)!). Thus
 </p>
 \begin{align*}
