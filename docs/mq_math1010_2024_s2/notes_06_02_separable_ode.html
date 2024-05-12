@@ -31,10 +31,288 @@ Separable ODE's are a particular kind of ODE that can be solved directly by Inte
 
 
 
-</div><div class="accordion-item" id="outline-container-&lt;topic&gt;-item"><h1 class="accordion-header" id="outline-container-&lt;topic&gt;-header"><button aria-controls="outline-container-&lt;topic&gt;-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-&lt;topic&gt;-collapse" data-bs-toggle="collapse" id="&lt;topic&gt;" type="button"><span class="section-number-2">2.</span> Topic</button></h1><div aria-labelledby="outline-container-&lt;topic&gt;-header" class="accordion-collapse collapse" id="outline-container-&lt;topic&gt;-collapse"><div class="accordion-body p-3 m-0" id="text-&lt;topic&gt;-body">
+</div><div class="accordion-item" id="outline-container-solving_ode-item"><h1 class="accordion-header" id="outline-container-solving_ode-header"><button aria-controls="outline-container-solving_ode-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-solving_ode-collapse" data-bs-toggle="collapse" id="solving_ode" type="button"><span class="section-number-2">2.</span> Solving ODE's</button></h1><div aria-labelledby="outline-container-solving_ode-header" class="accordion-collapse collapse" id="outline-container-solving_ode-collapse"><div class="accordion-body p-3 m-0" id="text-solving_ode-body">
+<div class="defn card" id="text-solving_ode-body-defn-0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
-&lt;contents&gt;
+The <b>General Solution</b> includes arbitrary constants and we use the initial conditions to determine the values of these constants.
 </p>
+</div></div>
+<p>
+The arbitrary constants are <b>constants of integration</b>
+\[
+F(x) = \int f(x) dx + C
+\]
+</p>
+<p>
+This is explained through the examples below.
+</p>
+</div></div>
+
+
+</div><div class="accordion-item" id="outline-container-ftc-item"><h1 class="accordion-header" id="outline-container-ftc-header"><button aria-controls="outline-container-ftc-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-ftc-collapse" data-bs-toggle="collapse" id="ftc" type="button"><span class="section-number-2">3.</span> Solving ODE's using FTC</button></h1><div aria-labelledby="outline-container-ftc-header" class="accordion-collapse collapse" id="outline-container-ftc-collapse"><div class="accordion-body p-3 m-0" id="text-ftc-body">
+<div class="lem card" id="text-ftc-body-lem-0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+\begin{align*}
+y'(t) &amp;= f(t) \\
+\Rightarrow y(t) &amp;= y(t_0) + \int_{t_0}^t f(u) du
+\end{align*}
+
+</div></div>
+<div class="pf card" id="text-ftc-body-pf-0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+By the fundamental theorem of calculus, and since \(y' = f\),
+</p>
+\begin{align*}
+y(t) - y(t_0) &amp;= \int_{t_0}^t y'(u) du \\
+&amp;= \int_{t_0}^t f(u) du
+\end{align*}
+
+</div></div>
+<div class="eg card" id="text-ftc-body-eg-0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+\begin{equation*}
+\begin{cases}
+y'(t) &amp;= t^2 \\
+y(1) &amp;= 3
+\end{cases}
+\end{equation*}
+
+<p>
+To solve this equation using the Fundamental Theorem of Calculus, we calculate
+</p>
+\begin{align*}
+y(t) &amp;= y(1) + \int_1^t f(u) du \\
+&amp;= 3 + \int_1^t u^2 du \\
+&amp;= 3 + \left.\frac{u^3}{3}\right|_1^t \\
+&amp;= 3 + \frac{t^3}{3} - \frac{1}{3} \\
+&amp;= \frac{8}{3} + \frac{t^3}{3}.
+\end{align*}
+
+<p>
+We can check the answer solves the ODE by differentiating:
+\[
+\frac{d}{dt} \left(\frac{8}{3} + \frac{t^3}{3}\right) = t^2.
+\]
+</p>
+<p>
+For the initial condition,
+\[
+\left.\left(\frac{8}{3} + \frac{t^3}{3}\right)\right|_{t=1} = \frac{8}{3} + \frac{1}{3} = 3.
+\]
+</p>
+</div></div>
+<div class="eg card" id="text-ftc-body-eg-1"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+\begin{equation*}
+\begin{cases}
+z''(t) &amp;= -g \\
+z(0) &amp;= z_0 \\
+z'(0) &amp;= v_0
+\end{cases}
+\end{equation*}
+
+<p>
+To apply the fundamental theorem of calculus, first let \(v = z'\). Then \(v' = (z')' = z'' = -g\) and \(v(0) = z'(0) = v_0\). Thus by the fundamental theorem of calculus,
+</p>
+\begin{align*}
+v(t) &amp;= v(0) + \int_{0}^t v'(u) du \\
+&amp;= v(0) + \int_{0}^t -g du \\
+&amp;= v(0) - gt \\
+&amp;= v_0 - gt
+\end{align*}
+
+<p>
+Then using \(z' = v = v_0 - gt\) and \(z(0) = z_0\) we obtain
+</p>
+\begin{align*}
+z(t) &amp;= z(0) + \int_{0}^t z'(u) du \\
+&amp;= z(0) + \int_{0}^t v(u) du \\
+&amp;= z_0 + \int_{0}^t v_0 - gu du \\
+&amp;= z_0 + v_0 \int_{0}^t du - g\int_{0}^t u du \\
+&amp;= z_0 + v_0 t - \frac{gt^2}{2}
+\end{align*}
+
+<p>
+Let's verify that this is indeed the solution. First
+</p>
+\begin{align*}
+z' &amp;= \frac{d}{dt} \left(z_0 + v_0 t - \frac{gt^2}{2}\right) \\
+&amp;= v_0 - gt \\
+\end{align*}
+<p>
+and
+\[
+z'' = (v_0 - gt)' = -g
+\]
+</p>
+<p>
+so that \(z\) does indeed solve the ODE. Second, for the initial conditions,
+</p>
+\begin{align*}
+z(0) &amp;= z_0 + v_0 \times 0 - \frac{g \times 0^2}{2} = z_0 \\
+z'(0) &amp;= v_0 - g \times 0 = v_0.
+\end{align*}
+
+</div></div>
+</div></div>
+
+
+</div><div class="accordion-item" id="outline-container-separable-item"><h1 class="accordion-header" id="outline-container-separable-header"><button aria-controls="outline-container-separable-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-separable-collapse" data-bs-toggle="collapse" id="separable" type="button"><span class="section-number-2">4.</span> Separable ODE's</button></h1><div aria-labelledby="outline-container-separable-header" class="accordion-collapse collapse" id="outline-container-separable-collapse"><div class="accordion-body p-3 m-0" id="text-separable-body">
+<div class="defn card" id="text-separable-body-defn-1"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+A separable ODE is an ODE of the form
+\[
+f(y) y' = g(t)
+\]
+</p>
+</div></div>
+<p>
+The variables have been <i>separated</i> into \(y\) variables on the left and \(t\) variables on the right. Such equations can be solved by substitution.
+</p>
+<div class="eg card" id="text-separable-body-eg-2"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+\begin{equation*}
+\begin{cases}
+y' &amp;= 3 y \\
+y(0) &amp;= 4
+\end{cases}
+\end{equation*}
+
+<p>
+For \(y \neq 0\) we may write
+\[
+\frac{1}{y} y' = 3
+\]
+</p>
+<p>
+This is of the form \(f(y) y' = g(t)\) with \(f(y) = \frac{1}{y}\) and \(g(t) = 3\). Integrating both sides with respect to \(t\) gives
+\[
+\int \frac{1}{y} y' dt = \int 3 dt = 3t + C.
+\]
+</p>
+<p>
+Letting \(u = y(t)\) on the left hand side, \(du = y' dt\) and so
+\[
+\int \frac{1}{y} y' dt = \int \frac{1}{u} du = \ln |u| = \ln |y|.
+\]
+</p>
+<p>
+Thus
+</p>
+\begin{align*}
+\ln |y| &amp;= \int \frac{1}{y} y' dt \\
+&amp;= 3t + C \\
+\end{align*}
+
+<p>
+Taking exponentials,
+\[
+\lvert y \rvert = e^{3t + C} = e^C e^{3t},
+\]
+which we can write as
+\[
+y = \pm e^C e^{3t} = A e^{3t}
+\]
+where \(A = \pm e^C\).
+</p>
+<p>
+The <b>general solution</b> is thus
+\[
+y = A e^{3t}
+\]
+with \(A\) an arbitrary constant.
+</p>
+<p>
+The initial condition allows us to solve for \(A\):
+\[
+4 = y(0) = Ae^{3 \times 0} = A.
+\]
+</p>
+<p>
+Finally then, the solution is
+\[
+y(t) = 4 e^{3t}.
+\]
+</p>
+</div></div>
+<div class="eg card" id="text-separable-body-eg-3"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+\begin{equation*}
+\begin{cases}
+p' &amp;= 5p(3-p) \\
+p(0) &amp;= 1
+\end{cases}
+\end{equation*}
+
+<p>
+This is a separable equation of the form,
+\[
+\frac{p'}{p(3-p)} = 5
+\]
+</p>
+<p>
+To integrate this we write
+\[
+\frac{1}{p(3-p)} = \frac{1}{3} \left(\frac{1}{p} + \frac{1}{3-p}\right)
+\].
+</p>
+<p>
+Then integrating gives
+</p>
+\begin{align*}
+\int \frac{1}{p(3-p)} dp &amp;= \int \frac{1}{3} \left(\frac{1}{p} + \frac{1}{3-p}\right) dp \\
+&amp;= \frac{1}{3} \ln |p| - \frac{1}{3} \ln |3-p| \\
+&amp;= \frac{1}{3} \ln \left\lvert\frac{p}{3-p}\right\rvert
+\end{align*}
+
+<p>
+Thus
+</p>
+\begin{align*}
+\frac{1}{3} \ln \left\lvert\frac{p}{3-p}\right\rvert &amp;= \int \frac{1}{p(3-p)} dp \\
+&amp;= \int \frac{1}{p(3-p)} p' dt \\
+&amp;= \int 5 dt \\
+&amp;= 5t + C
+\end{align*}
+
+<p>
+Thus
+\[
+\ln \left\lvert \frac{p}{3-p}\right\rvert = 15 t + D
+\]
+where \(D = 3C\).
+</p>
+<p>
+Taking exponentials,
+</p>
+\begin{align*}
+\frac{p}{3-p} &amp;= \pm e^{15t + D} = B e^{15t}
+\end{align*}
+<p>
+where \(B = \pm e^D\).
+</p>
+<p>
+Multiplying both sides by \(3-p\) gives
+\[
+p = B e^{15t}(3-p)
+\]
+which rearranges to give
+\[
+p(1 + B e^{15t}) = 3 Be^{15t}
+\]
+and hence
+</p>
+\begin{align*}
+p(t) &amp;= \frac{3B e^{15t}}{1 + B e^{15t}} \\
+&amp;= \frac{3}{\tfrac{1}{B} e^{-15t} + 1}
+\end{align*}
+
+<p>
+From the initial condition \(p(0) = 1\) we can solve for \(B\):
+\[
+1 = p(0) = \frac{3}{\tfrac{1}{B} + 1}
+\]
+hence \(B = \tfrac{1}{2}\). Thus finally
+\[
+p(t) = \frac{3}{1 + 2 e^{-15t}}
+\]
+</p>
+</div></div>
 </div></div>
 
 

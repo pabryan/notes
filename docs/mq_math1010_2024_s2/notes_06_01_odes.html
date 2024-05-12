@@ -34,10 +34,293 @@ Ordinary Differential Equations (ODE's for short) are equations involving the de
 
 
 
-</div><div class="accordion-item" id="outline-container-&lt;topic&gt;-item"><h1 class="accordion-header" id="outline-container-&lt;topic&gt;-header"><button aria-controls="outline-container-&lt;topic&gt;-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-&lt;topic&gt;-collapse" data-bs-toggle="collapse" id="&lt;topic&gt;" type="button"><span class="section-number-2">2.</span> Topic</button></h1><div aria-labelledby="outline-container-&lt;topic&gt;-header" class="accordion-collapse collapse" id="outline-container-&lt;topic&gt;-collapse"><div class="accordion-body p-3 m-0" id="text-&lt;topic&gt;-body">
+</div><div class="accordion-item" id="outline-container-ode-item"><h1 class="accordion-header" id="outline-container-ode-header"><button aria-controls="outline-container-ode-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-ode-collapse" data-bs-toggle="collapse" id="ode" type="button"><span class="section-number-2">2.</span> Ordinary Differential Equations</button></h1><div aria-labelledby="outline-container-ode-header" class="accordion-collapse collapse" id="outline-container-ode-collapse"><div class="accordion-body p-3 m-0" id="text-ode-body">
+<div class="defn card" id="text-ode-body-defn-0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
 <p>
-&lt;contents&gt;
+An <b>O</b>​rdinary <b>D</b>​ifferential <b>E</b>​equation (<b>ODE</b>) is an equation involving one or more derivatives of a function \(y(t)\).
 </p>
+</div></div>
+<div class="eg card" id="text-ode-body-eg-0"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Newton's second law states that Force = mass \(\times\) acceleration, i.e. \(F = ma\). Neglecting friction, a body free-falling under gravity experiences a downwards gravitational force only.
+</p>
+<p>
+The gravitation field near the surface of the Earth has strength \(g \simeq 9.81 m/s^2\). The force exerted on the body is downwards and equals \(F = -mg\) where \(m\) is the mass of the body and the minus sign accounts for the fact that the force is directed downwards.
+</p>
+<p>
+Letting \(z(t)\) denote the height of the body above the surface of the Earth at time \(t\), the acceleration is \(a = z''\). Then \(F = ma\) becomes
+\[
+-mg = mz''
+\]
+hence
+\[
+z'' = -g
+\]
+</p>
+</div></div>
+<div class="eg card" id="text-ode-body-eg-1"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Radioactive decay occurs when an atom randomly decays, emitting a particle. Consider a material composed of many atoms (e.g. a fossil). Denote the mass of a material by \(y(t)\). Over a short interval of time \(\Delta t\), the amount of mass that decays at time \(t\) is approximately \(ry(t)\Delta t\) where \(r \in (0, 1)\) is the proportion of mass that decays.
+</p>
+<p>
+After a short time interval \(\Delta t\), the mass remaining is the starting mass \(y(t)\) minus the decayed mass \(ry(t) \Delta t\). That is
+\[
+y(t + \Delta t) = y(t) - ry(t) \Delta t.
+\]
+</p>
+<p>
+Thus
+\[
+\frac{y(t + \Delta t) - y(t)}{\Delta t} = -r y(t).
+\]
+Taking the limit \(\Delta t \to 0\) we get
+\[
+y' = -r y
+\]
+</p>
+<p>
+In general (i.e. for problems other than radioactive decay), the rate \(r\) need not be restricted to \((0, 1)\) and for growth problems (as opposed to decay) problems we get \(y' = r y\).
+</p>
+</div></div>
+<div class="eg card" id="text-ode-body-eg-2"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+In population modelling, a first basic model is exponential growth/decay. If a population consists of \(p(t)\) members at time \(t\) and they are reproducing at the rate \(r &gt; 0\), then
+\[
+p' = rp.
+\]
+</p>
+<p>
+This is not a very realistic model since the population will continue to grow indefinitely which generally doesn't happen e.g. due to scarcity of resources; a population that grows without bound will eat all the available food! An early model that takes into account the availability of resources is the <i>logistic growth equation</i>:
+</p>
+<p>
+\[
+p' = rp(K-p)
+\]
+</p>
+<p>
+Here we retain the exponential growth term \(rp\), but it is multiplied by \(K - p\) . The constant \(K &gt; 0\) is called the <i>carrying capacity</i>.
+</p>
+<p>
+Notice that when \(p &gt; K\), we have \(K - p &lt; 0\) and hence \(p' = rp(K - p) &lt; 0\). That is, if the population \(p\) is ever greater than the carrying capacity \(K\), then the population decreases. This represents over population where there are not enough resources to support the population.
+</p>
+<p>
+On the other hand, if \(p &lt; K\), then \(p' = r'p(K-p) &gt; 0\) and the population increases. Now there are enough resources not only to support the population, but to support a growing population.
+</p>
+<p>
+The special case \(p(t) = K\) for all \(t\) is an equilibrium where the resources exactly meet the populations needs and the population remains steady, equal to \(K\) for all time. Another equilibrium is \(p(t) = 0\) for all \(t\).
+</p>
+</div></div>
+</div></div>
+
+
+</div><div class="accordion-item" id="outline-container-solutions-item"><h1 class="accordion-header" id="outline-container-solutions-header"><button aria-controls="outline-container-solutions-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-solutions-collapse" data-bs-toggle="collapse" id="solutions" type="button"><span class="section-number-2">3.</span> Solutions of ODE's</button></h1><div aria-labelledby="outline-container-solutions-header" class="accordion-collapse collapse" id="outline-container-solutions-collapse"><div class="accordion-body p-3 m-0" id="text-solutions-body">
+<div class="defn card" id="text-solutions-body-defn-1"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+A <i>solution</i> of an ode is a function \(f(t)\) satisfying the ODE for all \(t\).
+</p>
+</div></div>
+<div class="eg card" id="text-solutions-body-eg-3"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+\[
+z = -\frac{gt^2}{2}
+\]
+is a solution of
+\[
+z'' = -g
+\]
+</p>
+<p>
+To verify this claim, note that
+\[
+z' = -gt
+\]
+and hence
+\[
+z'' = - g.
+\]
+</p>
+</div></div>
+<div class="eg card" id="text-solutions-body-eg-4"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+\[
+y = e^{rt}
+\]
+is a solution of
+\[
+y' = r y
+\]
+</p>
+<p>
+To verify this claim, note that
+\[
+y' = re^{rt} = ry
+\]
+</p>
+</div></div>
+<div class="eg card" id="text-solutions-body-eg-5"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+\[
+p = \frac{K}{1+e^{-rKt}}
+\]
+is a solution of
+\[
+p' = r p (K - p)
+\]
+</p>
+<p>
+To verify this claim, by the chain rule,
+</p>
+\begin{align*}
+p' &amp;= -\frac{K}{(1+ e^{-rKt})^2} (1+ e^{-rKt})' \\
+&amp;= -\frac{K}{(1+ e^{-rKt})^2} \times (-rK e^{-rKt}) \\
+&amp;= \frac{rK^2 e^{-rKt}}{(1+ e^{-rKt})^2}.
+\end{align*}
+
+<p>
+On the other hand,
+</p>
+\begin{align*}
+rp(K-p) &amp;= \overbrace{\frac{rK}{1+ e^{-rKt}}}^{ {\color{red} 5p}} \overbrace{\left(K - \frac{K}{1+ e^{-rKt}}\right)}^{ {\color{red} (K-p)}} \\
+&amp;= \frac{rK}{1+ e^{-rKt}} \left(\frac{K(1+ e^{-rKt})}{1+ e^{-rKt}} - \frac{K}{1+ e^{-rKt}}\right) \\
+&amp;= \frac{rK}{1+ e^{-rKt}} \left(\frac{K + Ke^{-rKt} - K}{1+ e^{-rKt}}\right) \\
+&amp;= \frac{rK}{1+ e^{-rKt}} \left(\frac{Ke^{-rKt}}{1+ e^{-rKt}}\right) \\
+&amp;= \frac{rK^2 e^{-rKt}}{(1+ e^{-rKt})^2}.
+\end{align*}
+
+<p>
+Thus we see that indeed
+\[
+p' = rp(K-p).
+\]
+</p>
+</div></div>
+</div></div>
+
+
+</div><div class="accordion-item" id="outline-container-initial-item"><h1 class="accordion-header" id="outline-container-initial-header"><button aria-controls="outline-container-initial-collapse" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#outline-container-initial-collapse" data-bs-toggle="collapse" id="initial" type="button"><span class="section-number-2">4.</span> Initial Condition</button></h1><div aria-labelledby="outline-container-initial-header" class="accordion-collapse collapse" id="outline-container-initial-collapse"><div class="accordion-body p-3 m-0" id="text-initial-body">
+<div class="defn card" id="text-initial-body-defn-2"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+ODE's describe how a function changes. To determine solutions we need somewhere to start. The starting values are called <b>initial conditions</b>.
+</p>
+</div></div>
+<div class="eg card" id="text-initial-body-eg-6"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+The following problem specifies an ODE and the initial conditions. It's the free fall example but with the initial height \(z(0) = 1\) and the initial velocity \(z'(0) = 0\) specified. This corresponds to dropping (i.e. zero initial velocity) an object at height \(1\) above the surface of the earth.
+</p>
+
+\begin{equation*}
+\begin{cases}
+z'' &amp;= - g \\
+z(0) &amp;= 1 \\
+z'(0) &amp;= 0
+\end{cases}
+\end{equation*}
+
+<p>
+The solution is
+\[
+z(t) = \frac{-gt^2}{2} + 1
+\]
+</p>
+<p>
+To verify this, we first check the ODE
+</p>
+\begin{align*}
+z' &amp;= -gt \\
+z'' &amp;= \left(-gt\right)' = -g.
+\end{align*}
+
+<p>
+Next the initial conditions:
+</p>
+\begin{align*}
+z(0) &amp;= \frac{-g \times 0^2}{2} + 1 = 1 \\
+z'(0) &amp;= -g \times 0 = 0
+\end{align*}
+
+</div></div>
+<div class="eg card" id="text-initial-body-eg-7"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+For an exponential growth problem, we have the initial value \(y(0)\).
+</p>
+
+\begin{equation*}
+\begin{cases}
+y' &amp;= 3 y \\
+y(0) &amp;= 4
+\end{cases}
+\end{equation*}
+
+<p>
+The solution is
+\[
+y = 4 e^{3t}
+\]
+</p>
+<p>
+To see it solves the ODE,
+\[
+y' = (4e^{3t})' = 4 \times 3 e^{3t} = 4y
+\]
+</p>
+<p>
+For the initial condition,
+\[
+y(0) = 4 e^{3 \times 0} = 4
+\]
+</p>
+</div></div>
+<div class="eg card" id="text-initial-body-eg-8"><div class="card-header"><h5 class="card-title"></h5></div><div class="card-body">
+<p>
+Here's a logistic growth problem with initial condition specified.
+</p>
+
+\begin{equation*}
+\begin{cases}
+p' &amp;= 5p(3-p) \\
+p(0) &amp;= 1
+\end{cases}
+\end{equation*}
+
+<p>
+The solution is
+\[
+p = \frac{3}{1 + 2e^{-15t}}
+\]
+</p>
+<p>
+Verifying it solves the ODE
+</p>
+\begin{align*}
+p' &amp;= \left(\frac{3}{1+2e^{-15t}}\right)' \\
+&amp;= \frac{-3}{(1+2e^{-15t})^2} \times \left(-30 e^{-15t}\right) \\
+&amp;= \frac{90e^{-15t}}{(1 + 2 e^{-15 t})^2}
+\end{align*}
+
+<p>
+On the other hand,
+</p>
+\begin{align*}
+5p(3-p) &amp;= \overbrace{5 \times \frac{3}{1+2e^{-15t}}}^{ {\color{red} 5p}} \overbrace{\left(3 - \frac{3}{1+2e^{-15t}}\right)}^{ {\color{red} (3-p)}} \\
+&amp;= \frac{15}{1+2e^{-15t}} \left(\frac{3(1+2e^{-15t})}{1+2e^{-15t}} - \frac{3}{1+2e^{-15t}}\right) \\
+&amp;= \frac{15}{1+2e^{-15t}} \left(\frac{3 + 6e^{-15t} - 3}{1+2e^{-15t}}\right) \\
+&amp;= \frac{15}{1+2e^{-15t}} \left(\frac{6e^{-15t}}{1+2e^{-15t}}\right) \\
+&amp;= \frac{90 e^{-15t}}{(1+2e^{-15t})^2}.
+\end{align*}
+
+<p>
+Thus we see that indeed
+\[
+p' = 5p(3-p).
+\]
+</p>
+<p>
+For the initial condition,
+\[
+p(0) = \frac{3}{1 + 2e^{-15 \times 0}} = \frac{3}{3} = 1.
+\]
+</p>
+</div></div>
 </div></div>
 
 
