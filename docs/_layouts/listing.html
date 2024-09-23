@@ -2,12 +2,39 @@
 layout: page
 ---
 
-<ul>
-  {% for note in site.pages %}
-    {% if note.layout =="notes" and note.dir contains page.dir %}
-      <li><a href="{{ note.url | relative_url }}" target="_blank">Lesson {{ note.week }}.{{ note.lecture }} : {{ note.title }}</a></li>
-    {% endif %}
-  {% endfor %}
+{% comment %}
+Little hack here. I want to access site.data.<page_id>
+
+The simple way to do this is to hard code site.data.<page_id>. For example site.data.mypage. But I want to get <page_id> from page.page_id. That is, <page_id> is stored in a page variable. It doesn't seem possible to get liquid to eval something like
+
+site.data.{{ page.page_id }}
+
+That gives a syntax error.
+
+I also tried
+
+site.data[page.page_id]
+
+this has no syntax error but doesn't seem to match anything.
+
+So my solution is to loop over data in site.data. Each item will be a hash with data[0] the key and data[1] the value. Then I just check if data[0] == page.page_id. If so, that's the one I want and I set a variable notes to data[1]. Thus data[1] contains site.data.<page_id> as desired. Then I can use teh variable notes in my code below in place of site.data.<page_id>.
+{% endcomment %}
+
+{% assign notes = "" %}
+
+{% for data in site.data %}
+  {% if data[0] == page.page_id %}
+    {% assign notes = data[1] %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+<ul class="listing">
+{% for note in notes %}
+{% capture note_url %}{{ page.dir }}/notes_{{ note[1].week }}_{{ note[1].lecture }}_{{ note[1].name }}/{% endcapture %}
+
+<li><a href="{{ note_url | relative_url }}">Lesson {{ note[1].week }}.{{ note[1].lecture }} : {{ note[1].title }}</a></li>
+{% endfor %}
 </ul>
 
 {{ content }}

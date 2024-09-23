@@ -1,0 +1,86 @@
+{
+	"01_01_limits": {
+		"name": "limits",
+		"week": "01",
+		"lecture": "01",
+		"title": "Limits",
+		"topics": ["introduction", "limits", "one_sided_limits", "infinite_limits", "squeeze_theorem"]
+	},
+	"01_02_continuity": {
+		"name": "continuity",
+		"week": "01",
+		"lecture": "02",
+		"title": "Continuity",
+		"topics": ["introduction", "continuity", "continuity_laws", "standard_functions"]
+	},
+	"02_01_derivatives": {
+		"name": "derivatives",
+		"week": "02",
+		"lecture": "01",
+		"title": "Derivatives",
+		"topics": ["introduction", "derivatives", "secant_lines", "tangent_lines", "differentiability_implies_continuity"]
+	},
+	"02_02_derivative_rules": {
+		"name": "derivative_rules",
+		"week": "02",
+		"lecture": "02",
+		"title": "Derivative Rules",
+		"topics": ["introduction", "linearity", "product_rule", "quotient_rule", "trig_functions", "exponential_functions"]
+	},
+	"03_01_chain_rule": {
+		"name": "chain_rule",
+		"week": "03",
+		"lecture": "01",
+		"title": "Chain Rule",
+		"topics": ["introduction", "the_chain_rule", "inverse_functions"]
+	},
+	"03_02_curve_sketching": {
+		"name": "curve_sketching",
+		"week": "03",
+		"lecture": "02",
+		"title": "Curve Sketching",
+		"topics": ["introduction", "monotone", "extreme_points", "critical_points", "concavity", "asymptotes"]
+	},
+	"04_01_definite_integral": {
+		"name": "definite_integral",
+		"week": "04",
+		"lecture": "01",
+		"title": "Definite Integral",
+		"topics": ["introduction", "regular_partition", "approximating_sum", "definite_integral"]
+	},
+	"04_02_ftc": {
+		"name": "ftc",
+		"week": "04",
+		"lecture": "02",
+		"title": "Fundamental Theorem of Calculus",
+		"topics": ["introduction", "ftc", "antiderivatives", "common_integrals"]
+	},
+	"05_01_integral_substitution": {
+		"name": "integral_substitution",
+		"week": "05",
+		"lecture": "01",
+		"title": "Integration by Substitution",
+		"topics": ["introduction", "art_of_integration", "reverse_chain_rule", "substitution"]
+	},
+	"05_02_integration_by_parts": {
+		"name": "integration_by_parts",
+		"week": "05",
+		"lecture": "02",
+		"title": "Integration By Parts",
+		"topics": ["introduction", "reverse_product_rule", "integration_by_parts", "ilate"]
+	},
+	"06_01_odes": {
+		"name": "odes",
+		"week": "06",
+		"lecture": "01",
+		"title": "Ordinary Differential Equations",
+		"topics": ["introduction", "ode", "solutions", "initial"]
+	},
+	"06_02_separable_ode": {
+		"name": "separable_ode",
+		"week": "06",
+		"lecture": "02",
+		"title": "Separable ODEs",
+		"topics": ["introduction", "solving_ode", "ftc", "separable"]
+	}
+}
